@@ -1,0 +1,96 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.icon {
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.btn:hover .icon {
+  transform: translateX(3px);
+}
+
+/* Tamanhos */
+.size_sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+.size_md {
+  padding: 13px 24px;
+  font-size: 1rem;
+}
+
+.size_lg {
+  padding: 16px 32px;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+/* Variantes */
+.variant_primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(var(--color-accent-rgb), 0.35);
+}
+
+.variant_primary:hover {
+  background-color: var(--color-accent-light);
+  box-shadow: 0 6px 20px rgba(var(--color-accent-rgb), 0.45);
+  transform: translateY(-2px);
+}
+
+.variant_secondary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(26, 54, 93, 0.3);
+}
+
+.variant_secondary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.variant_header {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 9px 18px;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+}
+
+.variant_header:hover {
+  background-color: var(--color-accent-light);
+}
+
+.variant_outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+}
+
+.variant_outline:hover {
+  background-color: rgba(var(--color-accent-rgb), 0.08);
+}
+
+.fullWidth {
+  width: 100%;
+}

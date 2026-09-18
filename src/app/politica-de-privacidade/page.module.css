@@ -1,0 +1,108 @@
+.main {
+  padding: var(--space-12) 0 var(--space-20);
+  background-color: var(--color-surface-alt);
+  min-height: 80vh;
+}
+
+.wrapper {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.topBar {
+  margin-bottom: var(--space-8);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article {
+  background-color: var(--color-white);
+  padding: var(--space-10) var(--space-12);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+  line-height: 1.25;
+}
+
+.updated {
+  font-size: 0.85rem;
+  color: var(--color-neutral-500);
+  margin-bottom: var(--space-8);
+}
+
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+}
+
+.section p {
+  font-size: 0.975rem;
+  color: var(--color-neutral-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.section ul {
+  list-style: disc;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.section li {
+  font-size: 0.95rem;
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+}
+
+.footerAction {
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: background-color var(--transition-base);
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-accent-light);
+}
+
+@media (max-width: 640px) {
+  .article {
+    padding: var(--space-6) var(--space-4);
+  }
+}

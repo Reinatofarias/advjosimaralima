@@ -1,0 +1,134 @@
+.section {
+  padding: var(--space-20) 0;
+  background-color: var(--color-white);
+}
+
+.header {
+  text-align: center;
+  max-width: var(--container-narrow);
+  margin: 0 auto var(--space-12);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.pillarCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.iconBox {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background-color: rgba(var(--color-accent-rgb), 0.12);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.pillarTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.pillarText {
+  font-size: 0.925rem;
+  color: var(--color-neutral-700);
+  line-height: 1.6;
+}
+
+.bannerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: var(--color-white);
+  padding: var(--space-8) var(--space-10);
+  border-radius: var(--radius-2xl);
+  gap: var(--space-8);
+}
+
+.bannerContent {
+  max-width: 600px;
+}
+
+.bannerHeading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.bannerText {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.bannerCta {
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .bannerBox {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-6);
+  }
+
+  .bannerCta {
+    width: 100%;
+  }
+
+  .bannerCta button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}

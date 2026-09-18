@@ -1,0 +1,205 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background-color: #fee2e2;
+  color: var(--color-error);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  border-left: 3px solid var(--color-error);
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background-color: #ecfdf5;
+  color: var(--color-success);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-left: 3px solid var(--color-success);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-neutral-900);
+}
+
+.required {
+  color: var(--color-error);
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-4);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--color-neutral-900);
+  background-color: var(--color-surface-alt);
+  border: 1.5px solid var(--color-neutral-300);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.input:focus {
+  outline: none;
+  background-color: var(--color-white);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.15);
+}
+
+.inputError {
+  border-color: var(--color-error) !important;
+  background-color: #fffafb;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  height: 48px;
+  padding: 0 40px 0 var(--space-4);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: var(--color-neutral-900);
+  background-color: var(--color-surface-alt);
+  border: 1.5px solid var(--color-neutral-300);
+  border-radius: var(--radius-md);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.select:focus {
+  outline: none;
+  background-color: var(--color-white);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.15);
+}
+
+.selectArrow {
+  position: absolute;
+  right: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-neutral-500);
+  display: flex;
+  align-items: center;
+}
+
+.fieldError {
+  font-size: 0.775rem;
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 52px;
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(var(--color-accent-rgb), 0.4);
+  transition: all var(--transition-base);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--color-accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(var(--color-accent-rgb), 0.5);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btnContent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.loadingWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.privacyText {
+  font-size: 0.775rem;
+  color: var(--color-neutral-500);
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.privacyLink {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacyLink:hover {
+  color: var(--color-accent-dark);
+}

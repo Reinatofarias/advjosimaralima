@@ -1,0 +1,120 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-backdrop);
+  backdrop-filter: blur(4px);
+  padding: var(--space-4);
+  animation: fadeIn var(--transition-base) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  animation: slideUp var(--transition-base) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-100);
+  transition: all var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-900);
+}
+
+.header {
+  margin-bottom: var(--space-6);
+  text-align: left;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  background-color: rgba(var(--color-accent-rgb), 0.1);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: 0.925rem;
+  color: var(--color-neutral-700);
+  line-height: 1.5;
+}
+
+.content {
+  width: 100%;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 640px) {
+  .backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal {
+    max-width: 100%;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    padding: var(--space-6) var(--space-4) calc(var(--space-6) + env(safe-area-inset-bottom));
+    max-height: 92vh;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+}

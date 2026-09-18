@@ -1,0 +1,182 @@
+.section {
+  padding: var(--space-20) 0;
+  background-color: var(--color-surface-alt);
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.portraitCard {
+  width: 100%;
+  max-width: 360px;
+}
+
+.portraitPlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(145deg, #10243e 0%, #1a365d 100%);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6);
+  position: relative;
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-white);
+}
+
+.silhouette {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  color: #94a3b8;
+}
+
+.captionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  text-align: center;
+}
+
+.captionName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-white);
+}
+
+.captionOab {
+  font-size: 0.75rem;
+  color: var(--color-accent-light);
+}
+
+.placeholderTag {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.name {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.roleTag {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+
+.bioParagraph {
+  font-size: 1.025rem;
+  color: var(--color-neutral-700);
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
+}
+
+.quoteBox {
+  margin: var(--space-4) 0 var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-white);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.quoteText {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-primary-dark);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.featuresRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.925rem;
+  color: var(--color-neutral-700);
+  font-weight: 500;
+}
+
+.featureCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(var(--color-accent-rgb), 0.12);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ctaWrapper {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .portraitCard {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}

@@ -1,0 +1,67 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-neutral-200);
+  transition: all var(--transition-base);
+  height: 68px;
+  display: flex;
+  align-items: center;
+}
+
+.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+}
+
+.role {
+  font-size: 0.775rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.ctaWrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.725rem;
+  }
+
+  .ctaWrapper {
+    display: none; /* No mobile, o Hero CTA e o Sticky CTA cuidam da conversão */
+  }
+}
