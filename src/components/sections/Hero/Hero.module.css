@@ -105,7 +105,7 @@
 .frameContainer {
   position: relative;
   width: 100%;
-  max-width: clamp(560px, 46vw, 780px);
+  max-width: clamp(700px, 60vw, 960px);
   min-height: 100%;
   display: flex;
   align-items: flex-end;
@@ -125,7 +125,7 @@
 .portraitFrame {
   position: relative;
   width: 100%;
-  min-height: 680px;
+  min-height: 760px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -158,11 +158,11 @@
 .photoImage {
   position: relative;
   z-index: 1;
-  width: min(118%, 620px);
+  width: min(136%, 860px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 34px rgba(8, 31, 61, 0.28));
-  transform: translateY(68px);
+  transform: translateY(12px);
 }
 
 @media (max-width: 992px) {
@@ -221,12 +221,12 @@
   }
 
   .frameContainer {
-    max-width: 380px;
-    min-height: 400px;
+    max-width: 560px;
+    min-height: 420px;
   }
 
   .portraitFrame {
-    min-height: 400px;
+    min-height: 420px;
   }
 
   .innerMat::after {
@@ -234,7 +234,7 @@
   }
 
   .photoImage {
-    width: min(120%, 450px);
-    transform: translateY(46px);
+    width: min(145%, 560px);
+    transform: translateY(10px);
   }
 }
