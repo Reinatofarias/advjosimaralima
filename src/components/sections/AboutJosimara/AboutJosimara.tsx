@@ -14,7 +14,7 @@ export const AboutJosimara: React.FC = () => {
               <div className={styles.portraitFrame}>
                 <div className={styles.innerMat}>
                   <Image
-                    src="/pictures/2.png"
+                    src="/pictures/6.png"
                     alt="Dra. Josimara Lima em atendimento profissional"
                     width={1080}
                     height={1350}
