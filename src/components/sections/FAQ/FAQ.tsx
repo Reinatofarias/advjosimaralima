@@ -53,8 +53,6 @@ export const FAQ: React.FC = () => {
     <section className={styles.section} aria-labelledby="faq-heading">
       <div className="container">
         <div className={styles.header}>
-          <span className={styles.eyebrow}>Dúvidas comuns</span>
-
           <h2 id="faq-heading" className={styles.title}>
             Perguntas Frequentes
           </h2>

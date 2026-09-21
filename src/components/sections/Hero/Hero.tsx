@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { CTAButton } from '@/components/ui/CTAButton/CTAButton';
 import { SITE_CONFIG } from '@/config/site';
 import styles from './Hero.module.css';
@@ -8,8 +9,6 @@ export const Hero: React.FC = () => {
     <section className={styles.heroSection} aria-labelledby="hero-heading">
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.contentCol}>
-          <span className={styles.kicker}>Direito Previdenciário</span>
-
           <h1 id="hero-heading" className={styles.headline}>
             Sua situação com o INSS merece uma análise cuidadosa
           </h1>
@@ -41,7 +40,15 @@ export const Hero: React.FC = () => {
             <div className={styles.portraitFrame} role="img" aria-label="Retrato profissional da Dra. Josimara Lima, advogada previdenciária">
               <div className={styles.innerMat}>
                 <div className={styles.photoCanvas}>
-                  <div className={styles.monogram}>JL</div>
+                  <div className={styles.monogram}>
+                    <Image
+                      src="/brand/logo-symbol.png"
+                      alt=""
+                      width={112}
+                      height={112}
+                      className={styles.symbolImage}
+                    />
+                  </div>
                   <div className={styles.portraitText}>
                     <span className={styles.portraitTitle}>{SITE_CONFIG.name}</span>
                     <span className={styles.portraitSub}>Advogada Previdenciária</span>
@@ -63,10 +70,6 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <div className={styles.trustCard}>
-              <span className={styles.trustNumber}>01</span>
-              <span className={styles.trustText}>Escuta inicial para entender documentos, histórico e objetivo do pedido.</span>
-            </div>
           </div>
         </div>
       </div>

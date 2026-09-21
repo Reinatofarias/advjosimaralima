@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { SITE_CONFIG } from '@/config/site';
 import { CTAButton } from '@/components/ui/CTAButton/CTAButton';
 import styles from './AboutJosimara.module.css';
@@ -12,7 +13,15 @@ export const AboutJosimara: React.FC = () => {
             <div className={styles.frameWrapper}>
               <div className={styles.portraitFrame} role="img" aria-label="Fotografia profissional da Dra. Josimara Lima">
                 <div className={styles.innerMat}>
-                  <div className={styles.monogram}>JL</div>
+                  <div className={styles.monogram}>
+                    <Image
+                      src="/brand/logo-symbol.png"
+                      alt=""
+                      width={104}
+                      height={104}
+                      className={styles.symbolImage}
+                    />
+                  </div>
                   <div className={styles.portraitMeta}>
                     <span className={styles.metaName}>{SITE_CONFIG.name}</span>
                     <span className={styles.metaRole}>{SITE_CONFIG.role}</span>
@@ -24,8 +33,6 @@ export const AboutJosimara: React.FC = () => {
           </div>
 
           <div className={styles.infoCol}>
-            <span className={styles.eyebrow}>Quem vai analisar sua situação</span>
-
             <h2 id="about-heading" className={styles.name}>
               {SITE_CONFIG.name}
             </h2>

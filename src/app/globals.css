@@ -1,14 +1,14 @@
 :root {
   /* Cores Primárias - Azul Petróleo Nobre & Sóbrio */
-  --color-primary: #14243b;
-  --color-primary-light: #1f3657;
-  --color-primary-dark: #0b1524;
+  --color-primary: #123766;
+  --color-primary-light: #1f4f8f;
+  --color-primary-dark: #081f3d;
 
-  /* Cores de Acento - Verde Floresta / Sálvia Profundo (Acolhimento, terra e respeito) */
-  --color-accent: #1e4b3e;
-  --color-accent-light: #285f50;
-  --color-accent-dark: #14352b;
-  --color-accent-rgb: 30, 75, 62;
+  /* Cores de acento em azul para CTAs e estados interativos */
+  --color-accent: #1d5fbf;
+  --color-accent-light: #2f78db;
+  --color-accent-dark: #17498f;
+  --color-accent-rgb: 29, 95, 191;
 
   /* Neutros Aquecidos (Tons de Linho, Areia Suave e Off-white acolhedor) */
   --color-neutral-900: #181d24;
@@ -16,24 +16,24 @@
   --color-neutral-700: #3e4856;
   --color-neutral-600: #566170;
   --color-neutral-500: #717d8e;
-  --color-neutral-300: #dcd8cf;
-  --color-neutral-200: #ebe8e1;
-  --color-neutral-100: #f5f4ef;
-  --color-neutral-50: #faf9f5;
+  --color-neutral-300: #d7dee8;
+  --color-neutral-200: #e7edf5;
+  --color-neutral-100: #f2f6fb;
+  --color-neutral-50: #f8fbff;
   --color-white: #ffffff;
 
   /* Cores Funcionais */
-  --color-success: #166534;
+  --color-success: #1760a8;
   --color-error: #b91c1c;
   --color-warning: #b45309;
-  --color-highlight: #b46a45;
-  --color-highlight-rgb: 180, 106, 69;
-  --color-sky: #dcebf0;
+  --color-highlight: #5aa7d9;
+  --color-highlight-rgb: 90, 167, 217;
+  --color-sky: #e4f1fb;
 
   /* Superfícies */
   --color-surface: #ffffff;
-  --color-surface-alt: #f8f7f2;
-  --color-surface-warm: #f2efe7;
+  --color-surface-alt: #f7faff;
+  --color-surface-warm: #edf5fd;
   --color-backdrop: rgba(12, 21, 36, 0.72);
 
   /* Tipografia */

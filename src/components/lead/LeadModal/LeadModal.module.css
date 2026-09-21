@@ -40,7 +40,7 @@
   position: absolute;
   inset: 0 0 auto 0;
   height: 6px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+  background-color: var(--color-primary);
 }
 
 @keyframes slideUp {

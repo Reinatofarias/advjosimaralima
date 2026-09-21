@@ -23,6 +23,16 @@
   gap: var(--space-2);
 }
 
+.footerLogo {
+  width: 210px;
+  height: auto;
+  object-fit: contain;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
 .title {
   font-family: var(--font-heading);
   font-size: 1.35rem;

@@ -48,16 +48,14 @@
 
 /* Variantes */
 .variant_primary {
-  background:
-    linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  background-color: var(--color-accent);
   color: var(--color-white);
   border-color: var(--color-accent);
   box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.25);
 }
 
 .variant_primary:hover {
-  background:
-    linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+  background-color: var(--color-accent-light);
   border-color: var(--color-accent-light);
   box-shadow: 0 4px 14px rgba(var(--color-accent-rgb), 0.32);
   transform: translateY(-1px);

@@ -10,18 +10,6 @@
   margin: 0 auto var(--space-12);
 }
 
-.eyebrow {
-  display: inline-flex;
-  margin-bottom: var(--space-3);
-  padding: 7px 12px;
-  border-radius: var(--radius-full);
-  background-color: rgba(var(--color-accent-rgb), 0.08);
-  color: var(--color-accent-dark);
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
 .title {
   font-size: clamp(1.85rem, 3vw, 2.35rem);
   color: var(--color-primary);
@@ -117,8 +105,7 @@
 .finalBox {
   max-width: 860px;
   margin: 0 auto;
-  background:
-    linear-gradient(135deg, var(--color-primary), var(--color-accent-dark));
+  background-color: var(--color-primary);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: var(--space-10) var(--space-10);
   border-radius: var(--radius-lg);

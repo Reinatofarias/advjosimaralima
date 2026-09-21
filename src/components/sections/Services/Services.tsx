@@ -17,13 +17,8 @@ export const Services: React.FC = () => {
         </div>
 
         <div className={styles.grid}>
-          {SERVICES_LIST.map((service, index) => (
+          {SERVICES_LIST.map((service) => (
             <article key={service.id} className={styles.card}>
-              <div className={styles.cardTopline}>
-                <span className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</span>
-                {service.badge && <span className={styles.cardBadge}>{service.badge}</span>}
-              </div>
-
               <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{service.title}</h3>
               </div>

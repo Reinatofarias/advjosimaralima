@@ -4,9 +4,9 @@
   left: 0;
   right: 0;
   z-index: 800;
-  background-color: rgba(250, 249, 245, 0.82);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(20, 36, 59, 0.08);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(18, 55, 102, 0.1);
   transition: all var(--transition-base);
   height: 66px;
   display: flex;
@@ -25,6 +25,19 @@
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.brandText {
   display: flex;
   flex-direction: column;
 }
@@ -56,11 +69,11 @@
   }
 
   .name {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .role {
-    font-size: 0.725rem;
+    font-size: 0.7rem;
   }
 
   .ctaWrapper {

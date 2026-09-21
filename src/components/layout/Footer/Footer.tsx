@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE_CONFIG } from '@/config/site';
 import styles from './Footer.module.css';
 
@@ -11,6 +12,13 @@ export const Footer: React.FC = () => {
       <div className={`container ${styles.container}`}>
         <div className={styles.topSection}>
           <div className={styles.brandCol}>
+            <Image
+              src="/brand/logo-signature.png"
+              alt="Josimara Lima Advocacia Previdenciária"
+              width={242}
+              height={200}
+              className={styles.footerLogo}
+            />
             <div className={styles.title}>{SITE_CONFIG.name}</div>
             <div className={styles.subtitle}>
               {SITE_CONFIG.role} • OAB/PE: {SITE_CONFIG.oab}
