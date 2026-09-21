@@ -1,6 +1,8 @@
 .section {
   padding: var(--space-20) 0;
-  background-color: var(--color-white);
+  background:
+    linear-gradient(180deg, var(--color-surface-alt), #ffffff);
+  border-bottom: 1px solid var(--color-neutral-200);
 }
 
 .header {
@@ -9,100 +11,120 @@
   margin: 0 auto var(--space-12);
 }
 
-.tag {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-accent);
-  margin-bottom: var(--space-2);
-}
-
 .title {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  color: var(--color-primary-dark);
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  color: var(--color-primary);
   margin-bottom: var(--space-3);
   font-weight: 700;
+  letter-spacing: 0;
 }
 
 .subtitle {
   font-size: 1.05rem;
   color: var(--color-neutral-700);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .pillarsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-8);
+  gap: var(--space-6);
   margin-bottom: var(--space-12);
+  counter-reset: pillar;
 }
 
 .pillarCard {
+  counter-increment: pillar;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: var(--space-6);
-  border-radius: var(--radius-xl);
-  background-color: var(--color-surface-alt);
-  border: 1px solid var(--color-neutral-200);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+  border: 1px solid rgba(20, 36, 59, 0.08);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
 }
 
-.iconBox {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-lg);
-  background-color: rgba(var(--color-accent-rgb), 0.12);
-  color: var(--color-accent);
-  display: flex;
+.pillarCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.pillarCard::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  top: -28px;
+  width: 96px;
+  height: 96px;
+  border: 1px solid rgba(var(--color-accent-rgb), 0.12);
+  border-radius: var(--radius-full);
+}
+
+.pillarNumber {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--space-4);
+  min-width: 48px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: rgba(var(--color-accent-rgb), 0.08);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-5);
+  line-height: 1;
 }
 
 .pillarTitle {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   margin-bottom: var(--space-2);
 }
 
 .pillarText {
-  font-size: 0.925rem;
+  font-size: 0.95rem;
   color: var(--color-neutral-700);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-.bannerBox {
+.calloutBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-  color: var(--color-white);
+  background:
+    linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: var(--space-8) var(--space-10);
-  border-radius: var(--radius-2xl);
+  border-radius: var(--radius-lg);
   gap: var(--space-8);
+  box-shadow: var(--shadow-lg);
 }
 
-.bannerContent {
-  max-width: 600px;
+.calloutText {
+  max-width: 620px;
 }
 
-.bannerHeading {
-  font-size: 1.35rem;
+.calloutHeading {
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-white);
-  margin-bottom: var(--space-2);
+  margin-bottom: 6px;
 }
 
-.bannerText {
+.calloutDesc {
   font-size: 0.95rem;
-  color: #cbd5e1;
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
 }
 
-.bannerCta {
+.calloutAction {
   flex-shrink: 0;
 }
 
@@ -112,17 +134,17 @@
     gap: var(--space-4);
   }
 
-  .bannerBox {
+  .calloutBox {
     flex-direction: column;
     align-items: flex-start;
     padding: var(--space-6);
   }
 
-  .bannerCta {
+  .calloutAction {
     width: 100%;
   }
 
-  .bannerCta button {
+  .calloutAction button {
     width: 100%;
   }
 }

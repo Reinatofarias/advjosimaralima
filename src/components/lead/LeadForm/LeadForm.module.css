@@ -65,8 +65,8 @@
   font-size: 1rem;
   font-family: var(--font-body);
   color: var(--color-neutral-900);
-  background-color: var(--color-surface-alt);
-  border: 1.5px solid var(--color-neutral-300);
+  background-color: #ffffff;
+  border: 1.5px solid rgba(20, 36, 59, 0.14);
   border-radius: var(--radius-md);
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
@@ -95,8 +95,8 @@
   font-size: 0.95rem;
   font-family: var(--font-body);
   color: var(--color-neutral-900);
-  background-color: var(--color-surface-alt);
-  border: 1.5px solid var(--color-neutral-300);
+  background-color: #ffffff;
+  border: 1.5px solid rgba(20, 36, 59, 0.14);
   border-radius: var(--radius-md);
   appearance: none;
   cursor: pointer;
@@ -134,7 +134,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
   color: var(--color-white);
   font-family: var(--font-heading);
   font-size: 1.0625rem;
@@ -145,7 +145,7 @@
 }
 
 .submitBtn:hover:not(:disabled) {
-  background-color: var(--color-accent-light);
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(var(--color-accent-rgb), 0.5);
 }

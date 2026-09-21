@@ -1,10 +1,27 @@
 .section {
   padding: var(--space-20) 0;
-  background-color: var(--color-surface-alt);
-  border-top: 1px solid var(--color-neutral-200);
+  background:
+    linear-gradient(135deg, var(--color-primary-dark), var(--color-primary) 58%, var(--color-accent-dark));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 100%);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 26%, #000 74%, transparent 100%);
+  pointer-events: none;
 }
 
 .wrapper {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: var(--space-12);
@@ -16,65 +33,76 @@
   justify-content: center;
 }
 
-.portraitCard {
+.frameWrapper {
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
 }
 
-.portraitPlaceholder {
+.portraitFrame {
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: linear-gradient(145deg, #10243e 0%, #1a365d 100%);
-  border-radius: var(--radius-2xl);
+  background-color: rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  padding: 10px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.innerMat {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.92), rgba(220, 235, 240, 0.82) 52%, rgba(var(--color-highlight-rgb), 0.22));
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.42);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: var(--space-6);
-  position: relative;
-  color: var(--color-white);
-  box-shadow: var(--shadow-lg);
-  border: 4px solid var(--color-white);
+  text-align: center;
+  gap: var(--space-4);
 }
 
-.silhouette {
-  flex: 1;
+.monogram {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
-  color: #94a3b8;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: rgba(var(--color-accent-rgb), 0.05);
+  letter-spacing: 0;
 }
 
-.captionBox {
+.portraitMeta {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-lg);
-  width: 100%;
-  text-align: center;
+  gap: 3px;
 }
 
-.captionName {
+.metaName {
   font-family: var(--font-heading);
+  font-size: 1.15rem;
   font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
-.captionOab {
-  font-size: 0.75rem;
-  color: var(--color-accent-light);
+.metaRole {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
-.placeholderTag {
-  font-size: 0.7rem;
-  color: #cbd5e1;
-  margin-top: 4px;
-  font-style: italic;
+.metaOab {
+  font-size: 0.775rem;
+  color: var(--color-neutral-500);
+  margin-top: 2px;
 }
 
 .infoCol {
@@ -84,80 +112,85 @@
 }
 
 .eyebrow {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-accent);
-  margin-bottom: var(--space-2);
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: var(--space-3);
+  padding: 7px 12px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .name {
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-size: clamp(2.1rem, 3.2vw, 2.7rem);
   font-weight: 700;
-  color: var(--color-primary-dark);
-  line-height: 1.2;
+  color: var(--color-white);
+  line-height: 1.15;
   margin-bottom: 6px;
+  letter-spacing: 0;
 }
 
-.roleTag {
+.roleTitle {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-sky);
   margin-bottom: var(--space-6);
 }
 
 .bioParagraph {
-  font-size: 1.025rem;
-  color: var(--color-neutral-700);
-  line-height: 1.65;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
   margin-bottom: var(--space-4);
 }
 
 .quoteBox {
   margin: var(--space-4) 0 var(--space-6);
   padding: var(--space-4) var(--space-6);
-  background-color: var(--color-white);
-  border-left: 4px solid var(--color-accent);
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  box-shadow: var(--shadow-sm);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-highlight);
+  border-radius: var(--radius-md);
 }
 
 .quoteText {
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--color-primary-dark);
-  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
   font-weight: 500;
 }
 
-.featuresRow {
+.bulletList {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
   margin-bottom: var(--space-8);
 }
 
-.featureItem {
+.bulletItem {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  font-size: 0.925rem;
-  color: var(--color-neutral-700);
+  gap: var(--space-3);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.84);
   font-weight: 500;
 }
 
-.featureCheck {
+.bulletMark {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: rgba(var(--color-accent-rgb), 0.12);
-  color: var(--color-accent);
-  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-sky);
+  font-size: 0.75rem;
   font-weight: 700;
+  flex-shrink: 0;
 }
 
 .ctaWrapper {
@@ -170,7 +203,7 @@
     gap: var(--space-8);
   }
 
-  .portraitCard {
+  .frameWrapper {
     max-width: 280px;
   }
 }

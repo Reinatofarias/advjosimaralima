@@ -53,12 +53,13 @@ export const FAQ: React.FC = () => {
     <section className={styles.section} aria-labelledby="faq-heading">
       <div className="container">
         <div className={styles.header}>
-          <span className={styles.tag}>Esclarecimento de Dúvidas</span>
+          <span className={styles.eyebrow}>Dúvidas comuns</span>
+
           <h2 id="faq-heading" className={styles.title}>
             Perguntas Frequentes
           </h2>
           <p className={styles.subtitle}>
-            Tire as principais dúvidas sobre pedidos, comprovações e modalidades de benefícios previdenciários.
+            Esclarecimentos sobre requerimentos, comprovações e modalidades de benefícios previdenciários.
           </p>
         </div>
 
@@ -80,7 +81,7 @@ export const FAQ: React.FC = () => {
                 >
                   <span className={styles.questionText}>{item.question}</span>
                   <span className={styles.chevron} aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                       <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
@@ -99,15 +100,15 @@ export const FAQ: React.FC = () => {
           })}
         </div>
 
-        {/* Bloco de Chamada Final */}
-        <div className={styles.finalCtaBox}>
-          <div className={styles.finalCtaContent}>
-            <h3 className={styles.finalCtaTitle}>Ainda tem dúvidas sobre sua situação?</h3>
-            <p className={styles.finalCtaText}>
-              O primeiro passo para saber seus caminhos é explicar o que está acontecendo. Fale diretamente com a assessoria da Dra. Josimara Lima pelo WhatsApp.
+        {/* Bloco Final de Fechamento Editorial */}
+        <div className={styles.finalBox}>
+          <div className={styles.finalContent}>
+            <h3 className={styles.finalTitle}>Ainda tem dúvidas sobre sua situação?</h3>
+            <p className={styles.finalText}>
+              O primeiro passo é explicar o que está acontecendo. Apresente seu caso para conversar diretamente com a assessoria da Dra. Josimara Lima pelo WhatsApp.
             </p>
           </div>
-          <div className={styles.finalCtaAction}>
+          <div className={styles.finalAction}>
             <CTAButton origin="faq_final" variant="primary" size="lg">
               Explicar minha situação
             </CTAButton>

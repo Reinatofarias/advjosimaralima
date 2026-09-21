@@ -8,32 +8,22 @@ export const Hero: React.FC = () => {
     <section className={styles.heroSection} aria-labelledby="hero-heading">
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.contentCol}>
-          <div className={styles.badge}>
-            <span className={styles.badgeDot} aria-hidden="true" />
-            <span>Direito Previdenciário</span>
-          </div>
+          <span className={styles.kicker}>Direito Previdenciário</span>
 
           <h1 id="hero-heading" className={styles.headline}>
             Sua situação com o INSS merece uma análise cuidadosa
           </h1>
 
           <p className={styles.subheadline}>
-            Aposentadoria rural, salário-maternidade, auxílio-acidente ou benefício negado — cada história de trabalho tem detalhes decisivos. Apresente seu caso para entender como proceder.
+            Aposentadoria rural, salário-maternidade, auxílio-acidente ou benefício negado. Cada história de trabalho tem detalhes decisivos que precisam ser compreendidos individualmente antes de qualquer requerimento.
           </p>
 
-          <div className={styles.credentialsList}>
-            <div className={styles.credItem}>
-              <span className={styles.credIcon} aria-hidden="true">⏱</span>
-              <span>{SITE_CONFIG.experienceYears} de atuação</span>
-            </div>
-            <div className={styles.credItem}>
-              <span className={styles.credIcon} aria-hidden="true">🎓</span>
-              <span>{SITE_CONFIG.specialization}</span>
-            </div>
-            <div className={styles.credItem}>
-              <span className={styles.credIcon} aria-hidden="true">📍</span>
-              <span>Araripina/PE e atendimento online</span>
-            </div>
+          <div className={styles.metaRow}>
+            <span className={styles.metaItem}>{SITE_CONFIG.experienceYears} de atuação</span>
+            <span className={styles.metaSep} aria-hidden="true">•</span>
+            <span className={styles.metaItem}>{SITE_CONFIG.specialization}</span>
+            <span className={styles.metaSep} aria-hidden="true">•</span>
+            <span className={styles.metaItem}>Araripina/PE e atendimento online</span>
           </div>
 
           <div className={styles.ctaWrapper}>
@@ -47,33 +37,35 @@ export const Hero: React.FC = () => {
         </div>
 
         <div className={styles.mediaCol}>
-          <div className={styles.imageCard}>
-            {/* Placeholder profissional estilizado para fotografia real da Dra. Josimara */}
-            <div className={styles.photoPlaceholder} role="img" aria-label="Fotografia profissional da Dra. Josimara Lima, advogada previdenciária">
-              <div className={styles.photoSilhouette}>
-                <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
+          <div className={styles.frameContainer}>
+            <div className={styles.portraitFrame} role="img" aria-label="Retrato profissional da Dra. Josimara Lima, advogada previdenciária">
+              <div className={styles.innerMat}>
+                <div className={styles.photoCanvas}>
+                  <div className={styles.monogram}>JL</div>
+                  <div className={styles.portraitText}>
+                    <span className={styles.portraitTitle}>{SITE_CONFIG.name}</span>
+                    <span className={styles.portraitSub}>Advogada Previdenciária</span>
+                    <span className={styles.portraitOab}>OAB/PE {SITE_CONFIG.oab}</span>
+                  </div>
+                </div>
               </div>
-              <div className={styles.photoBadge}>
-                <span className={styles.photoName}>{SITE_CONFIG.name}</span>
-                <span className={styles.photoRole}>{SITE_CONFIG.role} • OAB/PE {SITE_CONFIG.oab}</span>
-              </div>
-              <div className={styles.photoNotice}>[Foto Profissional da Dra. Josimara Lima]</div>
             </div>
 
-            {/* Card de destaque flutuante */}
-            <div className={styles.floatingCard}>
-              <div className={styles.floatingIcon} aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className={styles.captionBadge}>
+              <div className={styles.captionIcon} aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
-              <div className={styles.floatingInfo}>
-                <span className={styles.floatingTitle}>Análise Individualizada</span>
-                <span className={styles.floatingDesc}>Atenção respeitosa a cada caso</span>
+              <div className={styles.captionInfo}>
+                <span className={styles.captionMain}>Atendimento Individualizado</span>
+                <span className={styles.captionDesc}>Atenção respeitosa a cada caso</span>
               </div>
+            </div>
+
+            <div className={styles.trustCard}>
+              <span className={styles.trustNumber}>01</span>
+              <span className={styles.trustText}>Escuta inicial para entender documentos, histórico e objetivo do pedido.</span>
             </div>
           </div>
         </div>

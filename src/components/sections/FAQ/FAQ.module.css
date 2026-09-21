@@ -1,6 +1,7 @@
 .section {
   padding: var(--space-20) 0;
-  background-color: var(--color-white);
+  background:
+    linear-gradient(180deg, #ffffff, var(--color-surface-alt));
 }
 
 .header {
@@ -9,27 +10,30 @@
   margin: 0 auto var(--space-12);
 }
 
-.tag {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-accent);
-  margin-bottom: var(--space-2);
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: var(--space-3);
+  padding: 7px 12px;
+  border-radius: var(--radius-full);
+  background-color: rgba(var(--color-accent-rgb), 0.08);
+  color: var(--color-accent-dark);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .title {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  color: var(--color-primary-dark);
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  color: var(--color-primary);
   margin-bottom: var(--space-3);
   font-weight: 700;
+  letter-spacing: 0;
 }
 
 .subtitle {
   font-size: 1.05rem;
   color: var(--color-neutral-700);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .accordionList {
@@ -41,17 +45,17 @@
 }
 
 .accordionItem {
-  background-color: var(--color-surface-alt);
-  border: 1px solid var(--color-neutral-200);
+  background-color: var(--color-white);
+  border: 1px solid rgba(20, 36, 59, 0.08);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
 }
 
 .itemOpen {
   border-color: var(--color-accent);
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .questionBtn {
@@ -72,7 +76,7 @@
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   line-height: 1.35;
 }
 
@@ -105,17 +109,19 @@
 .answerText {
   font-size: 0.95rem;
   color: var(--color-neutral-700);
-  line-height: 1.65;
+  line-height: 1.7;
+  padding-top: var(--space-1);
 }
 
-/* Bloco Final de CTA */
-.finalCtaBox {
-  max-width: 880px;
+/* Bloco Final de Fechamento Editorial */
+.finalBox {
+  max-width: 860px;
   margin: 0 auto;
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-  color: var(--color-white);
-  padding: var(--space-10) var(--space-12);
-  border-radius: var(--radius-2xl);
+  background:
+    linear-gradient(135deg, var(--color-primary), var(--color-accent-dark));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: var(--space-10) var(--space-10);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -123,39 +129,39 @@
   box-shadow: var(--shadow-lg);
 }
 
-.finalCtaContent {
+.finalContent {
   max-width: 520px;
 }
 
-.finalCtaTitle {
-  font-size: 1.5rem;
+.finalTitle {
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--color-white);
   margin-bottom: var(--space-2);
 }
 
-.finalCtaText {
+.finalText {
   font-size: 0.95rem;
-  color: #cbd5e1;
-  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
 }
 
-.finalCtaAction {
+.finalAction {
   flex-shrink: 0;
 }
 
 @media (max-width: 860px) {
-  .finalCtaBox {
+  .finalBox {
     flex-direction: column;
     align-items: flex-start;
     padding: var(--space-8) var(--space-6);
   }
 
-  .finalCtaAction {
+  .finalAction {
     width: 100%;
   }
 
-  .finalCtaAction button {
+  .finalAction button {
     width: 100%;
   }
 }

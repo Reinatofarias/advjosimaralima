@@ -6,17 +6,18 @@
   font-family: var(--font-heading);
   font-weight: 600;
   border-radius: var(--radius-md);
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
   transition: all var(--transition-base);
   user-select: none;
   position: relative;
   white-space: nowrap;
+  min-height: 42px;
 }
 
 .btn:active {
-  transform: scale(0.98);
+  transform: scale(0.99);
 }
 
 .icon {
@@ -35,60 +36,63 @@
 }
 
 .size_md {
-  padding: 13px 24px;
-  font-size: 1rem;
+  padding: 12px 22px;
+  font-size: 0.95rem;
 }
 
 .size_lg {
-  padding: 16px 32px;
-  font-size: 1.0625rem;
-  letter-spacing: -0.01em;
+  padding: 15px 30px;
+  font-size: 1rem;
+  letter-spacing: 0;
 }
 
 /* Variantes */
 .variant_primary {
-  background-color: var(--color-accent);
+  background:
+    linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
   color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(var(--color-accent-rgb), 0.35);
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.25);
 }
 
 .variant_primary:hover {
-  background-color: var(--color-accent-light);
-  box-shadow: 0 6px 20px rgba(var(--color-accent-rgb), 0.45);
-  transform: translateY(-2px);
+  background:
+    linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+  border-color: var(--color-accent-light);
+  box-shadow: 0 4px 14px rgba(var(--color-accent-rgb), 0.32);
+  transform: translateY(-1px);
 }
 
 .variant_secondary {
   background-color: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(26, 54, 93, 0.3);
+  border-color: var(--color-primary);
 }
 
 .variant_secondary:hover {
   background-color: var(--color-primary-light);
-  transform: translateY(-2px);
 }
 
 .variant_header {
-  background-color: var(--color-accent);
+  background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 9px 18px;
-  font-size: 0.9rem;
+  padding: 8px 18px;
+  font-size: 0.875rem;
   border-radius: var(--radius-md);
 }
 
 .variant_header:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-primary-light);
 }
 
 .variant_outline {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.62);
   color: var(--color-accent);
   border: 1.5px solid var(--color-accent);
 }
 
 .variant_outline:hover {
-  background-color: rgba(var(--color-accent-rgb), 0.08);
+  background-color: rgba(var(--color-accent-rgb), 0.06);
 }
 
 .fullWidth {

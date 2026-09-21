@@ -9,58 +9,56 @@ export const AboutJosimara: React.FC = () => {
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.imageCol}>
-            <div className={styles.portraitCard}>
-              <div className={styles.portraitPlaceholder} role="img" aria-label="Foto profissional da Dra. Josimara Lima">
-                <div className={styles.silhouette}>
-                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
-                  </svg>
+            <div className={styles.frameWrapper}>
+              <div className={styles.portraitFrame} role="img" aria-label="Fotografia profissional da Dra. Josimara Lima">
+                <div className={styles.innerMat}>
+                  <div className={styles.monogram}>JL</div>
+                  <div className={styles.portraitMeta}>
+                    <span className={styles.metaName}>{SITE_CONFIG.name}</span>
+                    <span className={styles.metaRole}>{SITE_CONFIG.role}</span>
+                    <span className={styles.metaOab}>OAB/PE {SITE_CONFIG.oab}</span>
+                  </div>
                 </div>
-                <div className={styles.captionBox}>
-                  <span className={styles.captionName}>{SITE_CONFIG.name}</span>
-                  <span className={styles.captionOab}>OAB/PE: {SITE_CONFIG.oab}</span>
-                </div>
-                <span className={styles.placeholderTag}>[Foto Dra. Josimara Lima]</span>
               </div>
             </div>
           </div>
 
           <div className={styles.infoCol}>
-            <span className={styles.eyebrow}>Atuação Especializada</span>
+            <span className={styles.eyebrow}>Quem vai analisar sua situação</span>
+
             <h2 id="about-heading" className={styles.name}>
               {SITE_CONFIG.name}
             </h2>
-            <div className={styles.roleTag}>
+            <div className={styles.roleTitle}>
               {SITE_CONFIG.role} • {SITE_CONFIG.specialization}
             </div>
 
             <p className={styles.bioParagraph}>
-              Com {SITE_CONFIG.experienceYears.toLowerCase()} de atuação direcionados às questões previdenciárias e benefícios do INSS, a Dra. Josimara Lima dedica seu trabalho ao esclarecimento de direitos de trabalhadores rurais e urbanos.
+              Com {SITE_CONFIG.experienceYears.toLowerCase()} de dedicação contínua ao Direito Previdenciário, a Dra. Josimara Lima orienta trabalhadores rurais e urbanos que buscam compreender e requerer seus benefícios perante o INSS.
             </p>
 
             <p className={styles.bioParagraph}>
-              Com escritório sediado em Araripina, no Sertão do Araripe (PE), e suporte online estruturado para atender trabalhadores de diversas regiões, sua condução profissional prioriza a transparência, a verificação documental rigorosa e o respeito à trajetória de cada segurado.
+              Com sede em Araripina, no Sertão do Araripe pernambucano, e estrutura de atendimento online para todo o país, seu trabalho é pautado pela escuta atenta, análise minuciosa da documentação e explicação transparente de cada etapa, sempre com linguagem simples e acolhedora.
             </p>
 
             <blockquote className={styles.quoteBox}>
               <p className={styles.quoteText}>
-                &ldquo;Cada pessoa que busca orientação tem uma história de trabalho e esforço. Nosso compromisso é ouvir atentamente, analisar a documentação com rigor técnico e explicar as reais possibilidades em linguagem simples e acessível.&rdquo;
+                &ldquo;Cada pessoa que nos procura traz uma trajetória de trabalho e esforço. Nosso dever é escutar com respeito, examinar a documentação com rigor técnico e apontar com clareza os caminhos viáveis.&rdquo;
               </p>
             </blockquote>
 
-            <div className={styles.featuresRow}>
-              <div className={styles.featureItem}>
-                <span className={styles.featureCheck}>✓</span>
+            <div className={styles.bulletList}>
+              <div className={styles.bulletItem}>
+                <span className={styles.bulletMark}>✓</span>
                 <span>Atendimento presencial em Araripina/PE</span>
               </div>
-              <div className={styles.featureItem}>
-                <span className={styles.featureCheck}>✓</span>
-                <span>Atendimento online seguro em todo o Brasil</span>
+              <div className={styles.bulletItem}>
+                <span className={styles.bulletMark}>✓</span>
+                <span>Atendimento online para todo o Brasil</span>
               </div>
-              <div className={styles.featureItem}>
-                <span className={styles.featureCheck}>✓</span>
-                <span>Linguagem acessível e sem complicação</span>
+              <div className={styles.bulletItem}>
+                <span className={styles.bulletMark}>✓</span>
+                <span>Linguagem acessível, clara e humanizada</span>
               </div>
             </div>
 

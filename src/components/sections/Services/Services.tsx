@@ -8,20 +8,25 @@ export const Services: React.FC = () => {
     <section className={styles.servicesSection} aria-labelledby="services-heading">
       <div className="container">
         <div className={styles.header}>
-          <span className={styles.categoryBadge}>Áreas de Atuação</span>
           <h2 id="services-heading" className={styles.title}>
             Em qual dessas situações você se encontra?
           </h2>
           <p className={styles.subtitle}>
-            Selecione o assunto mais próximo da sua realidade. Cada pedido exige comprovações e caminhos específicos perante a Previdência Social.
+            Selecione o assunto mais próximo da sua realidade. Cada benefício possui critérios e documentos específicos perante a Previdência Social.
           </p>
         </div>
 
         <div className={styles.grid}>
-          {SERVICES_LIST.map((service) => (
+          {SERVICES_LIST.map((service, index) => (
             <article key={service.id} className={styles.card}>
-              {service.badge && <span className={styles.cardBadge}>{service.badge}</span>}
-              <h3 className={styles.cardTitle}>{service.title}</h3>
+              <div className={styles.cardTopline}>
+                <span className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</span>
+                {service.badge && <span className={styles.cardBadge}>{service.badge}</span>}
+              </div>
+
+              <div className={styles.cardHeader}>
+                <h3 className={styles.cardTitle}>{service.title}</h3>
+              </div>
               <p className={styles.cardDesc}>{service.shortDescription}</p>
               
               <div className={styles.cardFooter}>

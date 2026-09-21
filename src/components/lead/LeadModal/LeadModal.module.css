@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-backdrop);
-  backdrop-filter: blur(4px);
+  background-color: rgba(12, 21, 36, 0.76);
+  backdrop-filter: blur(8px);
   padding: var(--space-4);
   animation: fadeIn var(--transition-base) forwards;
 }
@@ -25,18 +25,28 @@
   width: 100%;
   max-width: 480px;
   background-color: var(--color-white);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   padding: var(--space-8);
   box-shadow: var(--shadow-xl);
   max-height: calc(100vh - 40px);
   overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.68);
   animation: slideUp var(--transition-base) forwards;
+  overflow-x: hidden;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
 }
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(16px) scale(0.98);
+    transform: translateY(12px) scale(0.99);
   }
   to {
     opacity: 1;
@@ -48,14 +58,14 @@
   position: absolute;
   top: var(--space-4);
   right: var(--space-4);
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
   color: var(--color-neutral-500);
-  background-color: var(--color-neutral-100);
+  background-color: var(--color-surface-alt);
   transition: all var(--transition-fast);
 }
 
@@ -67,24 +77,12 @@
 .header {
   margin-bottom: var(--space-6);
   text-align: left;
-}
-
-.badge {
-  display: inline-block;
-  padding: 4px 10px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-accent);
-  background-color: rgba(var(--color-accent-rgb), 0.1);
-  border-radius: var(--radius-full);
-  margin-bottom: var(--space-2);
+  padding-right: var(--space-6);
 }
 
 .title {
-  font-size: 1.5rem;
-  color: var(--color-primary-dark);
+  font-size: 1.55rem;
+  color: var(--color-primary);
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: var(--space-2);
@@ -100,7 +98,6 @@
   width: 100%;
 }
 
-/* Responsividade Mobile */
 @media (max-width: 640px) {
   .backdrop {
     padding: 0;
@@ -109,7 +106,7 @@
 
   .modal {
     max-width: 100%;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     padding: var(--space-6) var(--space-4) calc(var(--space-6) + env(safe-area-inset-bottom));
     max-height: 92vh;
   }
