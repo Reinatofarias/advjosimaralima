@@ -105,7 +105,7 @@
 .frameContainer {
   position: relative;
   width: 100%;
-  max-width: clamp(700px, 60vw, 960px);
+  max-width: clamp(480px, 38vw, 640px);
   min-height: 100%;
   display: flex;
   align-items: flex-end;
@@ -125,7 +125,7 @@
 .portraitFrame {
   position: relative;
   width: 100%;
-  min-height: 760px;
+  min-height: 680px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -158,11 +158,11 @@
 .photoImage {
   position: relative;
   z-index: 1;
-  width: min(136%, 860px);
+  width: min(101%, 680px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 34px rgba(8, 31, 61, 0.28));
-  transform: translateY(12px);
+  transform: translateY(0);
 }
 
 @media (max-width: 992px) {
