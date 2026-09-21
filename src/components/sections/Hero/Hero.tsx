@@ -10,11 +10,11 @@ export const Hero: React.FC = () => {
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.contentCol}>
           <h1 id="hero-heading" className={styles.headline}>
-            Sua situação com o INSS merece uma análise cuidadosa
+            Salário-maternidade: entenda se você tem direito ao benefício
           </h1>
 
           <p className={styles.subheadline}>
-            Aposentadoria rural, salário-maternidade, auxílio-acidente ou benefício negado. Cada história de trabalho tem detalhes decisivos que precisam ser compreendidos individualmente antes de qualquer requerimento.
+            Atendimento jurídico para mães, trabalhadoras rurais, autônomas e seguradas do INSS que precisam organizar documentos, comprovar atividade e solicitar o salário-maternidade com orientação clara em cada etapa.
           </p>
 
           <div className={styles.metaRow}>
@@ -27,10 +27,10 @@ export const Hero: React.FC = () => {
 
           <div className={styles.ctaWrapper}>
             <CTAButton origin="hero" size="lg" className={styles.mainCta}>
-              Quero explicar minha situação
+              Quero analisar meu salário-maternidade
             </CTAButton>
             <span className={styles.ctaSubtext}>
-              Atendimento inicial humanizado • Resposta rápida pelo WhatsApp
+              Atendimento humanizado • Orientação rápida pelo WhatsApp
             </span>
           </div>
         </div>
