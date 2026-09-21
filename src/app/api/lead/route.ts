@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { randomUUID } from 'crypto';
 import { sanitizeString, normalizePhone, isValidPhoneBR } from '@/lib/leads/validation';
 import { SERVICE_OPTIONS } from '@/config/services';
+import { SITE_CONFIG } from '@/config/site';
 
 // Rate limiter in-memory simples (IP -> { count, resetAt })
 const ipLimiter = new Map<string, { count: number; resetAt: number }>();
@@ -95,6 +96,7 @@ export async function POST(request: NextRequest) {
     // 5. Montagem do Lead Estruturado
     const leadId = randomUUID();
     const normalizedPhone = normalizePhone(telefoneRaw);
+    const destinationWhatsappNumber = SITE_CONFIG.contact.whatsappNumber.replace(/\D/g, '');
     const timestamp = new Date().toISOString();
 
     const getString = (val: unknown) => (typeof val === 'string' ? val : '');
@@ -103,6 +105,7 @@ export async function POST(request: NextRequest) {
       lead_id: leadId,
       nome,
       telefone: normalizedPhone,
+      whatsapp_destino: destinationWhatsappNumber,
       servico: serviceMatch?.label || servico,
       servico_id: servico,
       cta_origin,

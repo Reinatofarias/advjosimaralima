@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
     description: 'Atendimento presencial em Araripina/PE e atendimento online para todo o Brasil',
   },
   contact: {
-    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5587991655434',
+    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5587991658434',
     email: '[INSERIR EMAIL]',
   },
   meta: {
