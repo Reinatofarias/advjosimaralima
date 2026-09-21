@@ -19,13 +19,8 @@ export const AboutJosimara: React.FC = () => {
                     width={1080}
                     height={1350}
                     className={styles.aboutPhoto}
-                    sizes="(max-width: 992px) 280px, 340px"
+                    sizes="(max-width: 992px) 420px, 520px"
                   />
-                  <div className={styles.portraitMeta}>
-                    <span className={styles.metaName}>{SITE_CONFIG.name}</span>
-                    <span className={styles.metaRole}>{SITE_CONFIG.role}</span>
-                    <span className={styles.metaOab}>OAB/PE {SITE_CONFIG.oab}</span>
-                  </div>
                 </div>
               </div>
             </div>

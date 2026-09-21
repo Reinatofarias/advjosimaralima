@@ -30,84 +30,54 @@
 .imageCol {
   display: flex;
   justify-content: center;
+  align-self: stretch;
+  align-items: flex-end;
 }
 
 .frameWrapper {
   width: 100%;
-  max-width: 360px;
+  max-width: clamp(410px, 34vw, 540px);
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.frameWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 12% 4% 0 10%;
+  border-radius: 54% 46% 0 0;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.2), rgba(90, 167, 217, 0.18) 42%, transparent 72%);
+  pointer-events: none;
 }
 
 .portraitFrame {
   width: 100%;
-  aspect-ratio: 0.84;
-  background: rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-lg);
-  padding: 10px;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(16px) saturate(130%);
-  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
 }
 
 .innerMat {
   width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(circle at 52% 4%, rgba(255, 255, 255, 0.24), rgba(31, 79, 143, 0.14) 42%, rgba(8, 31, 61, 0.2));
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.42);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: var(--space-4) var(--space-4) 0;
-  text-align: center;
-  gap: var(--space-4);
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
 .aboutPhoto {
-  width: min(104%, 350px);
+  width: min(118%, 520px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 24px 28px rgba(0, 0, 0, 0.28));
-  transform: translateY(4px);
-}
-
-.portraitMeta {
-  position: absolute;
-  left: var(--space-4);
-  right: var(--space-4);
-  bottom: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: var(--space-3);
-  border: 1px solid rgba(255, 255, 255, 0.46);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.74);
-  backdrop-filter: blur(16px) saturate(135%);
-  -webkit-backdrop-filter: blur(16px) saturate(135%);
-}
-
-.metaName {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.metaRole {
-  font-size: 0.85rem;
-  color: var(--color-accent);
-  font-weight: 600;
-}
-
-.metaOab {
-  font-size: 0.775rem;
-  color: var(--color-neutral-500);
-  margin-top: 2px;
+  filter: drop-shadow(0 30px 34px rgba(0, 0, 0, 0.34));
+  transform: translateY(34px);
 }
 
 .infoCol {
@@ -198,7 +168,17 @@
   }
 
   .frameWrapper {
-    max-width: 320px;
+    max-width: 420px;
+    min-height: 430px;
+  }
+
+  .portraitFrame {
+    min-height: 430px;
+  }
+
+  .aboutPhoto {
+    width: min(120%, 420px);
+    transform: translateY(26px);
   }
 }
 

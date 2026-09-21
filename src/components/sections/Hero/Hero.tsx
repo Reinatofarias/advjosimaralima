@@ -46,20 +46,8 @@ export const Hero: React.FC = () => {
                   height={1350}
                   className={styles.photoImage}
                   priority
-                  sizes="(max-width: 992px) 320px, 390px"
+                  sizes="(max-width: 992px) 420px, 560px"
                 />
-              </div>
-            </div>
-
-            <div className={styles.captionBadge}>
-              <div className={styles.captionIcon} aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <div className={styles.captionInfo}>
-                <span className={styles.captionMain}>Atendimento Individualizado</span>
-                <span className={styles.captionDesc}>Atenção respeitosa a cada caso</span>
               </div>
             </div>
 
