@@ -130,6 +130,18 @@ export async function POST(request: NextRequest) {
     // 6. Despacho para Make Webhook (se configurado)
     const makeWebhookUrl = process.env.MAKE_WEBHOOK_URL;
 
+    if (!makeWebhookUrl || !makeWebhookUrl.trim().startsWith('http')) {
+      console.error('[Webhook Make Missing]', {
+        lead_id: leadId,
+        has_make_webhook_url: Boolean(makeWebhookUrl),
+      });
+
+      return NextResponse.json(
+        { success: false, error: 'Integração de atendimento indisponível. Verifique a configuração do webhook.' },
+        { status: 500 }
+      );
+    }
+
     if (makeWebhookUrl && makeWebhookUrl.trim().startsWith('http')) {
       try {
         const controller = new AbortController();
@@ -150,10 +162,24 @@ export async function POST(request: NextRequest) {
           console.error(
             `[Webhook Make Error] Status: ${webhookResponse.status} - ${webhookResponse.statusText}`
           );
+
+          return NextResponse.json(
+            { success: false, error: 'Não foi possível registrar seus dados no atendimento. Tente novamente.' },
+            { status: 502 }
+          );
         }
+
+        console.log('[Webhook Make Success]', {
+          lead_id: leadId,
+          status: webhookResponse.status,
+        });
       } catch (webhookErr) {
         console.error('[Webhook Make Exception]', webhookErr);
-        // Continuamos para retornar o leadId e não bloquear o cliente caso o Make esteja temporariamente instável
+
+        return NextResponse.json(
+          { success: false, error: 'Não foi possível conectar ao atendimento. Tente novamente.' },
+          { status: 502 }
+        );
       }
     } else {
       // Modo de desenvolvimento sem webhook configurado: loga no servidor
