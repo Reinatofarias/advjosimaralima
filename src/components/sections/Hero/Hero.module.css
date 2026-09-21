@@ -1,7 +1,8 @@
 .heroSection {
   padding: var(--space-20) 0 var(--space-24);
   background:
-    radial-gradient(circle at 78% 20%, rgba(var(--color-accent-rgb), 0.14), transparent 34%),
+    radial-gradient(circle at 78% 20%, rgba(var(--color-accent-rgb), 0.2), transparent 32%),
+    radial-gradient(circle at 92% 76%, rgba(90, 167, 217, 0.2), transparent 28%),
     linear-gradient(180deg, #ffffff 0%, var(--color-surface-alt) 100%);
   position: relative;
   border-bottom: 1px solid var(--color-neutral-200);
@@ -115,10 +116,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: var(--glass-bg-strong);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(228, 241, 251, 0.34));
   border-radius: var(--radius-lg);
   padding: 14px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--glass-shadow);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(18px) saturate(135%);
   -webkit-backdrop-filter: blur(18px) saturate(135%);
@@ -196,13 +197,13 @@
   position: absolute;
   bottom: -16px;
   left: -12px;
-  background: var(--glass-bg-strong);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(237, 245, 253, 0.48));
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--glass-shadow);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(16px) saturate(135%);
   -webkit-backdrop-filter: blur(16px) saturate(135%);

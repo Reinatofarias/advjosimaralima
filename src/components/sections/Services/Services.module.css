@@ -1,6 +1,8 @@
 .servicesSection {
   padding: var(--space-20) 0;
   background:
+    radial-gradient(circle at 10% 10%, rgba(var(--color-accent-rgb), 0.11), transparent 30%),
+    radial-gradient(circle at 84% 80%, rgba(90, 167, 217, 0.14), transparent 34%),
     linear-gradient(180deg, var(--color-surface-alt), #ffffff);
   border-bottom: 1px solid var(--color-neutral-200);
   position: relative;
@@ -35,7 +37,7 @@
 
 .card {
   min-height: 100%;
-  background: var(--glass-bg-strong);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(237, 245, 253, 0.38));
   border: 1px solid var(--glass-border);
   border-top: 4px solid var(--color-primary);
   border-radius: var(--radius-lg);
@@ -45,9 +47,9 @@
   transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(16px) saturate(130%);
-  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(20px) saturate(145%);
+  -webkit-backdrop-filter: blur(20px) saturate(145%);
 }
 
 .card::before {

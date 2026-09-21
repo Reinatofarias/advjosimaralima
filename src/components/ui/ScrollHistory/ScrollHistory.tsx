@@ -57,30 +57,36 @@ export const ScrollHistory: React.FC = () => {
   };
 
   return (
-    <nav className={styles.history} aria-label="Progresso da página">
-      <div className={styles.track} aria-hidden="true">
-        <span className={styles.trackFill} style={{ transform: `scaleY(${progress})` }} />
+    <>
+      <div className={styles.mobileProgress} aria-hidden="true">
+        <span className={styles.mobileProgressFill} style={{ transform: `scaleX(${progress})` }} />
       </div>
 
-      <ol className={styles.list}>
-        {SECTIONS.map((section) => {
-          const isActive = activeId === section.id;
+      <nav className={styles.history} aria-label="Progresso da página">
+        <div className={styles.track} aria-hidden="true">
+          <span className={styles.trackFill} style={{ transform: `scaleY(${progress})` }} />
+        </div>
 
-          return (
-            <li key={section.id} className={styles.item}>
-              <a
-                href={`#${section.id}`}
-                className={`${styles.link} ${isActive ? styles.active : ''}`}
-                aria-current={isActive ? 'location' : undefined}
-                onClick={(event) => handleClick(event, section.id)}
-              >
-                <span className={styles.dot} aria-hidden="true" />
-                <span className={styles.label}>{section.label}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ol>
-    </nav>
+        <ol className={styles.list}>
+          {SECTIONS.map((section) => {
+            const isActive = activeId === section.id;
+
+            return (
+              <li key={section.id} className={styles.item}>
+                <a
+                  href={`#${section.id}`}
+                  className={`${styles.link} ${isActive ? styles.active : ''}`}
+                  aria-current={isActive ? 'location' : undefined}
+                  onClick={(event) => handleClick(event, section.id)}
+                >
+                  <span className={styles.dot} aria-hidden="true" />
+                  <span className={styles.label}>{section.label}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      </nav>
+    </>
   );
 };

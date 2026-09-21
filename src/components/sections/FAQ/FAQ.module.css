@@ -1,6 +1,8 @@
 .section {
   padding: var(--space-20) 0;
   background:
+    radial-gradient(circle at 12% 20%, rgba(var(--color-accent-rgb), 0.1), transparent 28%),
+    radial-gradient(circle at 82% 72%, rgba(90, 167, 217, 0.14), transparent 32%),
     linear-gradient(180deg, #ffffff, var(--color-surface-alt));
 }
 
@@ -33,14 +35,14 @@
 }
 
 .accordionItem {
-  background: var(--glass-bg-strong);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(237, 245, 253, 0.38));
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
 }
 
 .itemOpen {

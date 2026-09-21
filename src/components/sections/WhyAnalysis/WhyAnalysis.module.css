@@ -1,6 +1,8 @@
 .section {
   padding: var(--space-20) 0;
   background:
+    radial-gradient(circle at 16% 26%, rgba(var(--color-accent-rgb), 0.12), transparent 30%),
+    radial-gradient(circle at 88% 58%, rgba(90, 167, 217, 0.14), transparent 32%),
     linear-gradient(180deg, var(--color-surface-alt), #ffffff);
   border-bottom: 1px solid var(--color-neutral-200);
 }
@@ -40,11 +42,11 @@
   align-items: flex-start;
   padding: var(--space-8);
   border-radius: var(--radius-lg);
-  background: var(--glass-bg-strong);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(237, 245, 253, 0.4));
   border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(16px) saturate(130%);
-  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(20px) saturate(145%);
+  -webkit-backdrop-filter: blur(20px) saturate(145%);
   transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
   position: relative;
   overflow: hidden;
@@ -101,14 +103,14 @@
   align-items: center;
   justify-content: space-between;
   background:
-    linear-gradient(135deg, rgba(18, 55, 102, 0.94), rgba(31, 79, 143, 0.9));
-  border: 1px solid rgba(255, 255, 255, 0.22);
+    linear-gradient(135deg, rgba(18, 55, 102, 0.86), rgba(31, 79, 143, 0.76));
+  border: 1px solid rgba(255, 255, 255, 0.34);
   padding: var(--space-8) var(--space-10);
   border-radius: var(--radius-lg);
   gap: var(--space-8);
-  box-shadow: var(--shadow-lg);
-  backdrop-filter: blur(18px) saturate(135%);
-  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
 }
 
 .calloutText {
