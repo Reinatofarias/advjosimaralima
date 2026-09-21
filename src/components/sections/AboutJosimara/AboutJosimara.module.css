@@ -22,7 +22,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: minmax(430px, 0.95fr) 1.05fr;
   gap: var(--space-12);
   align-items: center;
 }
@@ -36,8 +36,8 @@
 
 .frameWrapper {
   width: 100%;
-  max-width: clamp(410px, 34vw, 540px);
-  min-height: 560px;
+  max-width: clamp(520px, 42vw, 680px);
+  min-height: 620px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -47,16 +47,16 @@
 .frameWrapper::before {
   content: "";
   position: absolute;
-  inset: 12% 4% 0 10%;
+  inset: 6% 0 0 4%;
   border-radius: 54% 46% 0 0;
   background:
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.2), rgba(90, 167, 217, 0.18) 42%, transparent 72%);
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.22), rgba(90, 167, 217, 0.2) 42%, transparent 72%);
   pointer-events: none;
 }
 
 .portraitFrame {
   width: 100%;
-  min-height: 560px;
+  min-height: 620px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -72,12 +72,29 @@
   position: relative;
 }
 
+.innerMat::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  z-index: 2;
+  width: min(136%, 740px);
+  height: 130px;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(180deg, rgba(8, 31, 61, 0), rgba(8, 31, 61, 0.84) 58%, var(--color-primary-dark) 92%),
+    linear-gradient(90deg, rgba(8, 31, 61, 0), rgba(8, 31, 61, 0.9) 18%, rgba(8, 31, 61, 0.9) 82%, rgba(8, 31, 61, 0));
+  pointer-events: none;
+}
+
 .aboutPhoto {
-  width: min(118%, 520px);
+  position: relative;
+  z-index: 1;
+  width: min(128%, 650px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 30px 34px rgba(0, 0, 0, 0.34));
-  transform: translateY(34px);
+  filter: drop-shadow(0 34px 36px rgba(0, 0, 0, 0.34));
+  transform: translateY(50px);
 }
 
 .infoCol {
@@ -168,22 +185,44 @@
   }
 
   .frameWrapper {
-    max-width: 420px;
-    min-height: 430px;
+    max-width: 540px;
+    min-height: 500px;
   }
 
   .portraitFrame {
-    min-height: 430px;
+    min-height: 500px;
+  }
+
+  .innerMat::after {
+    height: 110px;
   }
 
   .aboutPhoto {
-    width: min(120%, 420px);
-    transform: translateY(26px);
+    width: min(128%, 520px);
+    transform: translateY(42px);
   }
 }
 
 @media (max-width: 640px) {
   .section {
     padding: var(--space-12) 0;
+  }
+
+  .frameWrapper {
+    max-width: 390px;
+    min-height: 390px;
+  }
+
+  .portraitFrame {
+    min-height: 390px;
+  }
+
+  .innerMat::after {
+    height: 86px;
+  }
+
+  .aboutPhoto {
+    width: min(132%, 430px);
+    transform: translateY(34px);
   }
 }

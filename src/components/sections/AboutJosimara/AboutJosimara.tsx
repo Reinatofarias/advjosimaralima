@@ -19,7 +19,7 @@ export const AboutJosimara: React.FC = () => {
                     width={1080}
                     height={1350}
                     className={styles.aboutPhoto}
-                    sizes="(max-width: 992px) 420px, 520px"
+                    sizes="(max-width: 992px) 540px, 650px"
                   />
                 </div>
               </div>

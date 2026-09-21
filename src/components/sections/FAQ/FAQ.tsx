@@ -108,7 +108,7 @@ export const FAQ: React.FC = () => {
               width={1080}
               height={1350}
               className={styles.finalPortraitImage}
-              sizes="120px"
+              sizes="280px"
             />
           </div>
           <div className={styles.finalContent}>

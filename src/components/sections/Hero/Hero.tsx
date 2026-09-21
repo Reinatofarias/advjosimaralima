@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
                   height={1350}
                   className={styles.photoImage}
                   priority
-                  sizes="(max-width: 992px) 520px, 680px"
+                  sizes="(max-width: 992px) 580px, 780px"
                 />
               </div>
             </div>

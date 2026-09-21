@@ -107,11 +107,14 @@
 
 /* Bloco Final de Fechamento Editorial */
 .finalBox {
-  max-width: 860px;
+  max-width: 980px;
   margin: 0 auto;
-  background: rgba(18, 55, 102, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: var(--space-10) var(--space-10) var(--space-10) 156px;
+  min-height: 238px;
+  background:
+    linear-gradient(90deg, rgba(18, 55, 102, 0.92), rgba(18, 55, 102, 0.97) 38%, rgba(18, 55, 102, 0.94)),
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.14), transparent 34%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: var(--space-10) var(--space-10) var(--space-10) 280px;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -124,33 +127,42 @@
   position: relative;
 }
 
+.finalBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(18, 55, 102, 0.28), rgba(18, 55, 102, 0.94) 32%, rgba(18, 55, 102, 0.58) 100%),
+    linear-gradient(180deg, rgba(18, 55, 102, 0), rgba(18, 55, 102, 0.88) 86%);
+  pointer-events: none;
+}
+
 .finalPortrait {
   position: absolute;
-  left: var(--space-8);
+  z-index: 0;
+  left: 14px;
   bottom: 0;
-  width: 108px;
-  height: 132px;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  background:
-    radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.34), rgba(90, 167, 217, 0.16) 54%, rgba(8, 31, 61, 0.12));
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-bottom: 0;
+  width: 280px;
+  height: 250px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none;
 }
 
 .finalPortraitImage {
-  width: 128px;
+  width: 292px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.28));
-  transform: translateY(5px);
+  filter: drop-shadow(0 24px 28px rgba(0, 0, 0, 0.34));
+  transform: translate(-6px, 34px);
 }
 
 .finalContent {
+  position: relative;
+  z-index: 2;
   max-width: 520px;
 }
 
@@ -168,6 +180,8 @@
 }
 
 .finalAction {
+  position: relative;
+  z-index: 2;
   flex-shrink: 0;
 }
 
@@ -175,11 +189,20 @@
   .finalBox {
     flex-direction: column;
     align-items: flex-start;
-    padding: var(--space-8) var(--space-6);
+    min-height: auto;
+    padding: var(--space-8) var(--space-6) var(--space-8) 148px;
   }
 
   .finalPortrait {
-    display: none;
+    left: -18px;
+    width: 160px;
+    height: 100%;
+    opacity: 0.56;
+  }
+
+  .finalPortraitImage {
+    width: 190px;
+    transform: translate(-12px, 30px);
   }
 
   .finalAction {
@@ -206,5 +229,13 @@
 
   .questionText {
     font-size: 0.95rem;
+  }
+
+  .finalBox {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .finalPortrait {
+    display: none;
   }
 }

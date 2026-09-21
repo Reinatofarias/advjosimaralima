@@ -22,8 +22,8 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.25fr 0.85fr;
-  gap: var(--space-12);
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: var(--space-10);
   align-items: end;
   min-height: 680px;
 }
@@ -105,7 +105,7 @@
 .frameContainer {
   position: relative;
   width: 100%;
-  max-width: clamp(500px, 42vw, 680px);
+  max-width: clamp(560px, 46vw, 780px);
   min-height: 100%;
   display: flex;
   align-items: flex-end;
@@ -158,11 +158,11 @@
 .photoImage {
   position: relative;
   z-index: 1;
-  width: min(142%, 720px);
+  width: min(158%, 820px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 34px rgba(8, 31, 61, 0.28));
-  transform: translateY(58px);
+  transform: translateY(78px);
 }
 
 @media (max-width: 992px) {
@@ -185,7 +185,7 @@
   }
 
   .frameContainer {
-    max-width: 520px;
+    max-width: 580px;
     min-height: 500px;
   }
 
@@ -234,7 +234,7 @@
   }
 
   .photoImage {
-    width: min(140%, 440px);
-    transform: translateY(42px);
+    width: min(150%, 500px);
+    transform: translateY(52px);
   }
 }
