@@ -158,11 +158,11 @@
 .photoImage {
   position: relative;
   z-index: 1;
-  width: min(158%, 820px);
+  width: min(118%, 620px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 34px rgba(8, 31, 61, 0.28));
-  transform: translateY(78px);
+  transform: translateY(68px);
 }
 
 @media (max-width: 992px) {
@@ -234,7 +234,7 @@
   }
 
   .photoImage {
-    width: min(150%, 500px);
-    transform: translateY(52px);
+    width: min(120%, 450px);
+    transform: translateY(46px);
   }
 }

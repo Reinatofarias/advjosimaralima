@@ -40,13 +40,13 @@ export const Hero: React.FC = () => {
             <div className={styles.portraitFrame}>
               <div className={styles.innerMat}>
                 <Image
-                  src="/pictures/3.png"
+                  src="/pictures/3-hero-cropped.png"
                   alt="Dra. Josimara Lima, advogada previdenciária"
-                  width={1080}
-                  height={1350}
+                  width={578}
+                  height={914}
                   className={styles.photoImage}
                   priority
-                  sizes="(max-width: 992px) 580px, 780px"
+                  sizes="(max-width: 992px) 520px, 620px"
                 />
               </div>
             </div>
