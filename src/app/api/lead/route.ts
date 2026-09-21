@@ -105,6 +105,8 @@ export async function POST(request: NextRequest) {
       lead_id: leadId,
       nome,
       telefone: normalizedPhone,
+      origem: 'Landing Page',
+      origem_formulario: 'LP Dra. Josimara Lima',
       whatsapp_destino: destinationWhatsappNumber,
       situacao: serviceMatch?.label || servico,
       situacao_id: servico,
