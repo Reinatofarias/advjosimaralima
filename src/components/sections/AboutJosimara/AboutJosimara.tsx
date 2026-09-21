@@ -35,11 +35,11 @@ export const AboutJosimara: React.FC = () => {
             </div>
 
             <p className={styles.bioParagraph}>
-              Com {SITE_CONFIG.experienceYears.toLowerCase()} de dedicação contínua ao Direito Previdenciário, a Dra. Josimara Lima orienta trabalhadores rurais e urbanos que buscam compreender e requerer seus benefícios perante o INSS.
+              Há quase 10 anos na prática previdenciária, a Dra. Josimara Lima atua na análise de benefícios do INSS com atenção aos documentos, ao histórico de contribuições e à realidade de cada pessoa atendida.
             </p>
 
             <p className={styles.bioParagraph}>
-              Com sede em Araripina, no Sertão do Araripe pernambucano, e estrutura de atendimento online para todo o país, seu trabalho é pautado pela escuta atenta, análise minuciosa da documentação e explicação transparente de cada etapa, sempre com linguagem simples e acolhedora.
+              Com atendimento em Pernambuco e estrutura online para todo o país, seu trabalho é pautado pela escuta atenta, análise minuciosa da documentação e explicação transparente de cada etapa, sempre com linguagem simples e acolhedora.
             </p>
 
             <blockquote className={styles.quoteBox}>
@@ -51,7 +51,7 @@ export const AboutJosimara: React.FC = () => {
             <div className={styles.bulletList}>
               <div className={styles.bulletItem}>
                 <span className={styles.bulletMark}>✓</span>
-                <span>Atendimento presencial em Araripina/PE</span>
+                <span>Atendimento presencial em Pernambuco</span>
               </div>
               <div className={styles.bulletItem}>
                 <span className={styles.bulletMark}>✓</span>

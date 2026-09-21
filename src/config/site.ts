@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   shortTitle: 'Dra. Josimara Lima — Direito Previdenciário',
   role: 'Advogada Previdenciária',
   oab: '57.835',
-  experienceYears: 'Aproximadamente 10 anos',
+  experienceYears: 'Há quase 10 anos na prática previdenciária',
   specialization: 'Pós-graduada em Direito Previdenciário',
   location: {
     city: 'Araripina',

@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
           />
           <div className={styles.brandText}>
             <span className={styles.name}>{SITE_CONFIG.name}</span>
-            <span className={styles.role}>{SITE_CONFIG.role} • Araripina/PE</span>
+            <span className={styles.role}>{SITE_CONFIG.role}</span>
           </div>
         </div>
 

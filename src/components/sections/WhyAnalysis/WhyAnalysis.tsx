@@ -30,7 +30,7 @@ export const WhyAnalysis: React.FC = () => {
             <div className={styles.pillarNumber}>02</div>
             <h3 className={styles.pillarTitle}>Requisitos que variam</h3>
             <p className={styles.pillarText}>
-              Idade, tempo de carência, períodos de contribuição e condições de saúde variam segundo a regra aplicável. Entender quais diretrizes e regras de transição atendem ao seu histórico evita pedidos indeferidos.
+              Qualidade de segurado, períodos de contribuição, comprovação de atividade e condições pessoais variam segundo a regra aplicável. Entender quais diretrizes atendem ao seu histórico evita pedidos indeferidos.
             </p>
           </div>
 

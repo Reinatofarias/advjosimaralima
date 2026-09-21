@@ -18,11 +18,11 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className={styles.metaRow}>
-            <span className={styles.metaItem}>{SITE_CONFIG.experienceYears} de atuação</span>
+            <span className={styles.metaItem}>{SITE_CONFIG.experienceYears}</span>
             <span className={styles.metaSep} aria-hidden="true">•</span>
             <span className={styles.metaItem}>{SITE_CONFIG.specialization}</span>
             <span className={styles.metaSep} aria-hidden="true">•</span>
-            <span className={styles.metaItem}>Araripina/PE e atendimento online</span>
+            <span className={styles.metaItem}>Pernambuco e atendimento online</span>
           </div>
 
           <div className={styles.ctaWrapper}>

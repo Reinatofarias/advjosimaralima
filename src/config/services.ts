@@ -19,7 +19,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     id: 'salario_maternidade',
     title: 'Salário-Maternidade',
     shortDescription:
-      'Orientação para trabalhadoras rurais, autônomas e seguradas do INSS antes ou após o parto, com verificação de carência e comprovação de atividade.',
+      'Orientação para trabalhadoras rurais, autônomas e seguradas do INSS antes ou após o parto, com verificação da qualidade de segurado e comprovação de atividade.',
     ctaText: 'Entender minha situação',
     badge: 'Maternidade',
   },
