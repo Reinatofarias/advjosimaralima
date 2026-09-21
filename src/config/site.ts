@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   title: 'Advogada Previdenciária em Araripina/PE — Dra. Josimara Lima',
   shortTitle: 'Dra. Josimara Lima — Direito Previdenciário',
   role: 'Advogada Previdenciária',
-  oab: '[INSERIR OAB/PE]',
+  oab: '57.835',
   experienceYears: 'Aproximadamente 10 anos',
   specialization: 'Pós-graduada em Direito Previdenciário',
   location: {

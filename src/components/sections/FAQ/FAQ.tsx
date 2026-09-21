@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { CTAButton } from '@/components/ui/CTAButton/CTAButton';
 import styles from './FAQ.module.css';
 
@@ -100,6 +101,16 @@ export const FAQ: React.FC = () => {
 
         {/* Bloco Final de Fechamento Editorial */}
         <div className={styles.finalBox}>
+          <div className={styles.finalPortrait} aria-hidden="true">
+            <Image
+              src="/pictures/1.png"
+              alt=""
+              width={1080}
+              height={1350}
+              className={styles.finalPortraitImage}
+              sizes="120px"
+            />
+          </div>
           <div className={styles.finalContent}>
             <h3 className={styles.finalTitle}>Ainda tem dúvidas sobre sua situação?</h3>
             <p className={styles.finalText}>

@@ -100,22 +100,23 @@
 .frameContainer {
   position: relative;
   width: 100%;
-  max-width: 390px;
+  max-width: 430px;
 }
 
 .frameContainer::before {
   content: "";
   position: absolute;
-  inset: 28px -18px -18px 28px;
+  inset: 36px -18px 12px 30px;
   border: 1px solid rgba(var(--color-accent-rgb), 0.18);
   border-radius: var(--radius-lg);
-  background-color: var(--color-surface-warm);
+  background:
+    linear-gradient(150deg, rgba(18, 55, 102, 0.12), rgba(90, 167, 217, 0.18));
 }
 
 .portraitFrame {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 0.84;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(228, 241, 251, 0.34));
   border-radius: var(--radius-lg);
   padding: 14px;
@@ -129,68 +130,24 @@
 .innerMat {
   width: 100%;
   height: 100%;
-  background-color: var(--color-surface-alt);
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.95), rgba(228, 241, 251, 0.5) 48%, rgba(18, 55, 102, 0.12));
   border-radius: var(--radius-md);
   border: 1px solid rgba(18, 55, 102, 0.08);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: var(--space-6);
+  padding: var(--space-4) var(--space-4) 0;
   position: relative;
   overflow: hidden;
 }
 
-.photoCanvas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: var(--space-3);
-}
-
-.monogram {
-  width: 126px;
-  height: 126px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(18, 55, 102, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-}
-
-.symbolImage {
-  width: 100%;
-  height: 100%;
+.photoImage {
+  width: min(108%, 430px);
+  height: auto;
   object-fit: contain;
-}
-
-.portraitText {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.portraitTitle {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.portraitSub {
-  font-size: 0.825rem;
-  color: var(--color-accent);
-  font-weight: 600;
-}
-
-.portraitOab {
-  font-size: 0.75rem;
-  color: var(--color-neutral-500);
-  margin-top: 4px;
+  filter: drop-shadow(0 22px 26px rgba(8, 31, 61, 0.22));
+  transform: translateY(6px);
 }
 
 .captionBadge {
@@ -249,7 +206,7 @@
   }
 
   .frameContainer {
-    max-width: 320px;
+    max-width: 360px;
   }
 
   .captionBadge {
@@ -282,5 +239,9 @@
     bottom: auto;
     left: auto;
     margin-top: var(--space-3);
+  }
+
+  .portraitFrame {
+    aspect-ratio: 0.9;
   }
 }

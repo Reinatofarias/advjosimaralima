@@ -37,24 +37,17 @@ export const Hero: React.FC = () => {
 
         <div className={styles.mediaCol}>
           <div className={styles.frameContainer}>
-            <div className={styles.portraitFrame} role="img" aria-label="Retrato profissional da Dra. Josimara Lima, advogada previdenciária">
+            <div className={styles.portraitFrame}>
               <div className={styles.innerMat}>
-                <div className={styles.photoCanvas}>
-                  <div className={styles.monogram}>
-                    <Image
-                      src="/brand/logo-symbol-blue-transparent.png"
-                      alt=""
-                      width={112}
-                      height={112}
-                      className={styles.symbolImage}
-                    />
-                  </div>
-                  <div className={styles.portraitText}>
-                    <span className={styles.portraitTitle}>{SITE_CONFIG.name}</span>
-                    <span className={styles.portraitSub}>Advogada Previdenciária</span>
-                    <span className={styles.portraitOab}>OAB/PE {SITE_CONFIG.oab}</span>
-                  </div>
-                </div>
+                <Image
+                  src="/pictures/3.png"
+                  alt="Dra. Josimara Lima, advogada previdenciária"
+                  width={1080}
+                  height={1350}
+                  className={styles.photoImage}
+                  priority
+                  sizes="(max-width: 992px) 320px, 390px"
+                />
               </div>
             </div>
 

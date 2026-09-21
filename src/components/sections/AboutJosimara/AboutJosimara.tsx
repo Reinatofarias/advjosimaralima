@@ -11,17 +11,16 @@ export const AboutJosimara: React.FC = () => {
         <div className={styles.wrapper}>
           <div className={styles.imageCol}>
             <div className={styles.frameWrapper}>
-              <div className={styles.portraitFrame} role="img" aria-label="Fotografia profissional da Dra. Josimara Lima">
+              <div className={styles.portraitFrame}>
                 <div className={styles.innerMat}>
-                  <div className={styles.monogram}>
-                    <Image
-                      src="/brand/logo-symbol-blue-transparent.png"
-                      alt=""
-                      width={104}
-                      height={104}
-                      className={styles.symbolImage}
-                    />
-                  </div>
+                  <Image
+                    src="/pictures/2.png"
+                    alt="Dra. Josimara Lima em atendimento profissional"
+                    width={1080}
+                    height={1350}
+                    className={styles.aboutPhoto}
+                    sizes="(max-width: 992px) 280px, 340px"
+                  />
                   <div className={styles.portraitMeta}>
                     <span className={styles.metaName}>{SITE_CONFIG.name}</span>
                     <span className={styles.metaRole}>{SITE_CONFIG.role}</span>
