@@ -106,6 +106,8 @@ export async function POST(request: NextRequest) {
       nome,
       telefone: normalizedPhone,
       whatsapp_destino: destinationWhatsappNumber,
+      situacao: serviceMatch?.label || servico,
+      situacao_id: servico,
       servico: serviceMatch?.label || servico,
       servico_id: servico,
       cta_origin,

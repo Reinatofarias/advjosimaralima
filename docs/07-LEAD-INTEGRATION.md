@@ -148,7 +148,11 @@ Campo invisível `website` no formulário. Se preenchido → rejeitar silenciosa
   "lead_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "nome": "Maria da Silva",
   "telefone": "5587999998888",
-  "servico": "aposentadoria_rural",
+  "whatsapp_destino": "5587991658434",
+  "situacao": "Salário-Maternidade",
+  "situacao_id": "salario_maternidade",
+  "servico": "Salário-Maternidade",
+  "servico_id": "salario_maternidade",
   "cta_origin": "service_aposentadoria_rural",
   "utm_source": "google",
   "utm_medium": "cpc",
@@ -164,6 +168,18 @@ Campo invisível `website` no formulário. Se preenchido → rejeitar silenciosa
   "status": "novo"
 }
 ```
+
+### Placeholders principais no Make
+
+Para a planilha, os campos principais recebidos pelo webhook são:
+
+| Coluna sugerida | Placeholder | Exemplo |
+|-----------------|-------------|---------|
+| Nome | `nome` | Maria da Silva |
+| Telefone | `telefone` | 5587999998888 |
+| Situação | `situacao` | Salário-Maternidade |
+
+Campos complementares úteis: `lead_id`, `timestamp`, `status`, `cta_origin`, `whatsapp_destino`, `situacao_id`, `utm_source`, `utm_medium`, `utm_campaign`, `gclid`, `landing_page` e `referrer`.
 
 ### Timeout
 - 10 segundos para resposta do webhook
@@ -236,7 +252,7 @@ Campo invisível `website` no formulário. Se preenchido → rejeitar silenciosa
 | B | Lead ID | a1b2c3d4-... |
 | C | Nome | Maria da Silva |
 | D | WhatsApp | 5587999998888 |
-| E | Serviço | Aposentadoria Rural |
+| E | Situação | Salário-Maternidade |
 | F | Origem CTA | service_aposentadoria_rural |
 | G | UTM Source | google |
 | H | UTM Medium | cpc |
