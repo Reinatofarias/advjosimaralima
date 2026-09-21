@@ -40,11 +40,13 @@
 .portraitFrame {
   width: 100%;
   aspect-ratio: 4 / 5;
-  background-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-lg);
   padding: 10px;
   box-shadow: var(--shadow-xl);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
 }
 
 .innerMat {
@@ -137,9 +139,11 @@
 .quoteBox {
   margin: var(--space-4) 0 var(--space-6);
   padding: var(--space-4) var(--space-6);
-  background-color: rgba(255, 255, 255, 0.08);
+  background: var(--glass-dark);
   border-left: 3px solid var(--color-highlight);
   border-radius: var(--radius-md);
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
 }
 
 .quoteText {

@@ -4,7 +4,7 @@ import styles from './WhyAnalysis.module.css';
 
 export const WhyAnalysis: React.FC = () => {
   return (
-    <section className={styles.section} aria-labelledby="why-analysis-heading">
+    <section id="analise" className={styles.section} aria-labelledby="why-analysis-heading">
       <div className="container">
         <div className={styles.header}>
           <h2 id="why-analysis-heading" className={styles.title}>

@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
       <div className={`container ${styles.container}`}>
         <div className={styles.brand}>
           <Image
-            src="/brand/logo-symbol.png"
+            src="/brand/logo-symbol-blue-transparent.png"
             alt=""
             width={44}
             height={44}

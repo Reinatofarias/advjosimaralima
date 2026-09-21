@@ -1,6 +1,8 @@
 .heroSection {
   padding: var(--space-20) 0 var(--space-24);
-  background-color: var(--color-white);
+  background:
+    radial-gradient(circle at 78% 20%, rgba(var(--color-accent-rgb), 0.14), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, var(--color-surface-alt) 100%);
   position: relative;
   border-bottom: 1px solid var(--color-neutral-200);
   overflow: hidden;
@@ -56,8 +58,8 @@
   gap: var(--space-3) var(--space-4);
   margin-bottom: var(--space-8);
   padding: var(--space-4) 0;
-  border-top: 1px solid rgba(18, 55, 102, 0.14);
-  border-bottom: 1px solid rgba(18, 55, 102, 0.14);
+  border-top: 1px solid rgba(18, 55, 102, 0.12);
+  border-bottom: 1px solid rgba(18, 55, 102, 0.12);
   width: 100%;
 }
 
@@ -113,11 +115,13 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background-color: var(--color-white);
+  background: var(--glass-bg-strong);
   border-radius: var(--radius-lg);
   padding: 14px;
   box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(18, 55, 102, 0.12);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
   transition: transform var(--transition-base);
 }
 
@@ -192,14 +196,16 @@
   position: absolute;
   bottom: -16px;
   left: -12px;
-  background-color: var(--color-white);
+  background: var(--glass-bg-strong);
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
   display: flex;
   align-items: center;
   gap: var(--space-3);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-neutral-200);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px) saturate(135%);
+  -webkit-backdrop-filter: blur(16px) saturate(135%);
 }
 
 .captionIcon {

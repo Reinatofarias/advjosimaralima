@@ -24,12 +24,9 @@
 }
 
 .footerLogo {
-  width: 210px;
+  width: 230px;
   height: auto;
   object-fit: contain;
-  background-color: var(--color-white);
-  border-radius: var(--radius-md);
-  padding: var(--space-3);
   margin-bottom: var(--space-3);
 }
 

@@ -7,12 +7,14 @@ import { WhyAnalysis } from '@/components/sections/WhyAnalysis/WhyAnalysis';
 import { AboutJosimara } from '@/components/sections/AboutJosimara/AboutJosimara';
 import { FAQ } from '@/components/sections/FAQ/FAQ';
 import { UtmInitializer } from '@/components/analytics/UtmInitializer';
+import { ScrollHistory } from '@/components/ui/ScrollHistory/ScrollHistory';
 
 export default function Home() {
   return (
     <>
       <UtmInitializer />
       <Header />
+      <ScrollHistory />
       <main id="main-content">
         {/* SEÇÃO 01 — HERO */}
         <Hero />

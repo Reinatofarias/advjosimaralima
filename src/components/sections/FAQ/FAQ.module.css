@@ -33,12 +33,14 @@
 }
 
 .accordionItem {
-  background-color: var(--color-white);
-  border: 1px solid rgba(20, 36, 59, 0.08);
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
 }
 
 .itemOpen {
@@ -105,7 +107,7 @@
 .finalBox {
   max-width: 860px;
   margin: 0 auto;
-  background-color: var(--color-primary);
+  background: rgba(18, 55, 102, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: var(--space-10) var(--space-10);
   border-radius: var(--radius-lg);
@@ -114,6 +116,8 @@
   justify-content: space-between;
   gap: var(--space-8);
   box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
 }
 
 .finalContent {

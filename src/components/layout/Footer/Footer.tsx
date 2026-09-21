@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
         <div className={styles.topSection}>
           <div className={styles.brandCol}>
             <Image
-              src="/brand/logo-signature.png"
+              src="/brand/logo-full-white-transparent.png"
               alt="Josimara Lima Advocacia Previdenciária"
               width={242}
               height={200}

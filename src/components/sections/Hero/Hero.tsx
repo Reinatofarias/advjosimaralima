@@ -6,7 +6,7 @@ import styles from './Hero.module.css';
 
 export const Hero: React.FC = () => {
   return (
-    <section className={styles.heroSection} aria-labelledby="hero-heading">
+    <section id="inicio" className={styles.heroSection} aria-labelledby="hero-heading">
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.contentCol}>
           <h1 id="hero-heading" className={styles.headline}>
@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
                 <div className={styles.photoCanvas}>
                   <div className={styles.monogram}>
                     <Image
-                      src="/brand/logo-symbol.png"
+                      src="/brand/logo-symbol-blue-transparent.png"
                       alt=""
                       width={112}
                       height={112}

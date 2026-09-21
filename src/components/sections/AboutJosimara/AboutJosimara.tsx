@@ -6,7 +6,7 @@ import styles from './AboutJosimara.module.css';
 
 export const AboutJosimara: React.FC = () => {
   return (
-    <section className={styles.section} aria-labelledby="about-heading">
+    <section id="sobre" className={styles.section} aria-labelledby="about-heading">
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.imageCol}>
@@ -15,7 +15,7 @@ export const AboutJosimara: React.FC = () => {
                 <div className={styles.innerMat}>
                   <div className={styles.monogram}>
                     <Image
-                      src="/brand/logo-symbol.png"
+                      src="/brand/logo-symbol-blue-transparent.png"
                       alt=""
                       width={104}
                       height={104}

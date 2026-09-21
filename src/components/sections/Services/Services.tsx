@@ -5,7 +5,7 @@ import styles from './Services.module.css';
 
 export const Services: React.FC = () => {
   return (
-    <section className={styles.servicesSection} aria-labelledby="services-heading">
+    <section id="servicos" className={styles.servicesSection} aria-labelledby="services-heading">
       <div className="container">
         <div className={styles.header}>
           <h2 id="services-heading" className={styles.title}>

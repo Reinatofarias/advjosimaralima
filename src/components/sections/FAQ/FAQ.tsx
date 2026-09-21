@@ -50,7 +50,7 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section className={styles.section} aria-labelledby="faq-heading">
+    <section id="duvidas" className={styles.section} aria-labelledby="faq-heading">
       <div className="container">
         <div className={styles.header}>
           <h2 id="faq-heading" className={styles.title}>

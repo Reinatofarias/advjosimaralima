@@ -40,9 +40,11 @@
   align-items: flex-start;
   padding: var(--space-8);
   border-radius: var(--radius-lg);
-  background-color: var(--color-white);
-  border: 1px solid rgba(20, 36, 59, 0.08);
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
   transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
   position: relative;
   overflow: hidden;
@@ -99,12 +101,14 @@
   align-items: center;
   justify-content: space-between;
   background:
-    linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  border: 1px solid rgba(255, 255, 255, 0.12);
+    linear-gradient(135deg, rgba(18, 55, 102, 0.94), rgba(31, 79, 143, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.22);
   padding: var(--space-8) var(--space-10);
   border-radius: var(--radius-lg);
   gap: var(--space-8);
   box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
 }
 
 .calloutText {
