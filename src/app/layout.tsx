@@ -63,7 +63,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WM42Z7FV';
 
   // Schema.org JSON-LD para Advocacia / Serviços Jurídicos
   const jsonLd = {
