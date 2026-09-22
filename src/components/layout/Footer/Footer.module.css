@@ -12,7 +12,7 @@
 
 .topSection {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
+  grid-template-columns: minmax(300px, 1.5fr) minmax(190px, 0.8fr) minmax(220px, 1fr);
   gap: var(--space-10);
   margin-bottom: var(--space-10);
 }
@@ -75,13 +75,14 @@
 .link {
   color: var(--color-neutral-300);
   font-size: 0.875rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .link:hover {
   color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nonLink {
@@ -115,10 +116,24 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .topSection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
   .topSection {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+  }
+
+  .brandCol {
+    grid-column: auto;
   }
 
   .footer {

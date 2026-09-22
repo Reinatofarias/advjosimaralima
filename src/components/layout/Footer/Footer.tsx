@@ -29,7 +29,35 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className={styles.linksCol}>
-            <div className={styles.colHeading}>Informações e Legal</div>
+            <div className={styles.colHeading}>Links rápidos</div>
+            <nav aria-label="Links rápidos">
+              <ul className={styles.linkList}>
+                <li>
+                  <Link href="/#salario-maternidade" className={styles.link}>
+                    Salário-Maternidade
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#servicos" className={styles.link}>
+                    Serviços Previdenciários
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#sobre" className={styles.link}>
+                    Conheça a Dra. Josimara
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#duvidas" className={styles.link}>
+                    Dúvidas Frequentes
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className={styles.linksCol}>
+            <div className={styles.colHeading}>Informações</div>
             <ul className={styles.linkList}>
               <li>
                 <Link href="/politica-de-privacidade" className={styles.link}>

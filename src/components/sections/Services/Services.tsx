@@ -18,7 +18,11 @@ export const Services: React.FC = () => {
 
         <div className={styles.grid}>
           {SERVICES_LIST.map((service) => (
-            <article key={service.id} className={styles.card}>
+            <article
+              key={service.id}
+              id={service.id.replaceAll('_', '-')}
+              className={styles.card}
+            >
               <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{service.title}</h3>
               </div>
