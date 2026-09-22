@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://drajosimara.com.br';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.josimaralimadv.com.br';
   const currentDate = new Date();
 
   return [

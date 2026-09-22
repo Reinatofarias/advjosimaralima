@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://drajosimara.com.br'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.josimaralimadv.com.br'),
   title: {
     default: SITE_CONFIG.title,
     template: `%s — ${SITE_CONFIG.name}`,

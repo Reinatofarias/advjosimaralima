@@ -15,7 +15,7 @@ Landing Page (5 Seções de Alta Conversão)
     ▼ Clique em qualquer CTA
 LeadModal (Nome, WhatsApp com máscara BR, Serviço de interesse)
     │
-    ▼ Submissão protegida (Honeypot + Rate Limit + Tempo Mínimo)
+    ▼ Submissão protegida (Honeypot + Rate Limit)
 POST /api/lead (Validação server-side, normalização E.164, UUID v4)
     │
     ▼ Dispatch assíncrono
@@ -104,7 +104,7 @@ cp .env.example .env.local
 Preencha as variáveis:
 ```env
 # URL do Webhook criado no Make (deixe vazio em dev para modo log)
-MAKE_WEBHOOK_URL=https://hook.us1.make.com/sua-chave-webhook
+MAKE_WEBHOOK_URL=https://hook.us2.make.com/sua-chave-webhook
 
 # WhatsApp oficial de atendimento (apenas números com DDI 55)
 NEXT_PUBLIC_WHATSAPP_NUMBER=5587999999999
@@ -113,7 +113,7 @@ NEXT_PUBLIC_WHATSAPP_NUMBER=5587999999999
 NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 
 # URL do site publicado
-NEXT_PUBLIC_SITE_URL=https://drajosimara.com.br
+NEXT_PUBLIC_SITE_URL=https://www.josimaralimadv.com.br
 ```
 
 ### 4. Executar em Modo de Desenvolvimento

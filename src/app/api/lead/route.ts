@@ -58,14 +58,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true, lead_id: randomUUID() }, { status: 200 });
     }
 
-    // 3. Proteção Anti-Bot 2: Tempo mínimo de preenchimento (3 segundos)
-    const openedAt = Number(body.form_opened_at);
-    if (openedAt && Date.now() - openedAt < 3000) {
-      // Se submeteu em menos de 3 segundos, provável script automatizado
-      return NextResponse.json({ success: true, lead_id: randomUUID() }, { status: 200 });
-    }
-
-    // 4. Validação e Sanitização
+    // 3. Validação e Sanitização
     const nome = sanitizeString(typeof body.nome === 'string' ? body.nome : '');
     const telefoneRaw = typeof body.telefone === 'string' ? body.telefone : '';
     const servico = typeof body.servico === 'string' ? body.servico : '';
@@ -93,7 +86,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 5. Montagem do Lead Estruturado
+    // 4. Montagem do Lead Estruturado
     const leadId = randomUUID();
     const normalizedPhone = normalizePhone(telefoneRaw);
     const destinationWhatsappNumber = SITE_CONFIG.contact.whatsappNumber.replace(/\D/g, '');
@@ -127,7 +120,7 @@ export async function POST(request: NextRequest) {
       status: 'novo',
     };
 
-    // 6. Despacho para Make Webhook (se configurado)
+    // 5. Despacho para Make Webhook (se configurado)
     const makeWebhookUrl = process.env.MAKE_WEBHOOK_URL;
 
     if (!makeWebhookUrl || !makeWebhookUrl.trim().startsWith('http')) {
@@ -141,6 +134,8 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    const makeWebhookHost = new URL(makeWebhookUrl).host;
 
     if (makeWebhookUrl && makeWebhookUrl.trim().startsWith('http')) {
       try {
@@ -172,6 +167,7 @@ export async function POST(request: NextRequest) {
         console.log('[Webhook Make Success]', {
           lead_id: leadId,
           status: webhookResponse.status,
+          host: makeWebhookHost,
         });
       } catch (webhookErr) {
         console.error('[Webhook Make Exception]', webhookErr);
@@ -189,6 +185,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       lead_id: leadId,
+      webhook_host: makeWebhookHost,
     });
   } catch (error) {
     console.error('[Lead API Route Error]', error);

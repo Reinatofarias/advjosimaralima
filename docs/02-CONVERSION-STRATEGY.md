@@ -158,4 +158,3 @@ Essa função:
 - WhatsApp só abre após confirmação do backend
 - Rate limiting previne spam sem impactar conversão
 - Honeypot invisível filtra bots
-- Tempo mínimo de preenchimento (3s) bloqueia automações

@@ -37,7 +37,7 @@ Google Sheets (Registro)
   "gclid": "CjwKCAjw...",
   "gbraid": null,
   "wbraid": null,
-  "landing_page": "https://drajosimara.com.br/",
+  "landing_page": "https://www.josimaralimadv.com.br/",
   "referrer": "https://www.google.com/",
   "honeypot": "",
   "form_opened_at": 1695830400000
@@ -128,13 +128,6 @@ Campo invisível `website` no formulário. Se preenchido → rejeitar silenciosa
 - Implementação in-memory via `Map<string, { count: number, resetAt: number }>`
 - Em caso de excesso → retornar 429
 
-### Tempo Mínimo
-
-- `form_opened_at` é enviado pelo frontend (timestamp do momento em que o modal abriu)
-- Se `Date.now() - form_opened_at < 3000ms` → rejeitar (bot preencheu muito rápido)
-
----
-
 ## Envio para Make Webhook
 
 ### Request para o Make
@@ -162,7 +155,7 @@ Campo invisível `website` no formulário. Se preenchido → rejeitar silenciosa
   "gclid": "CjwKCAjw...",
   "gbraid": "",
   "wbraid": "",
-  "landing_page": "https://drajosimara.com.br/",
+  "landing_page": "https://www.josimaralimadv.com.br/",
   "referrer": "https://www.google.com/",
   "timestamp": "2026-09-18T13:00:00.000Z",
   "status": "novo"
@@ -260,7 +253,7 @@ Campos complementares úteis: `lead_id`, `timestamp`, `status`, `cta_origin`, `w
 | J | Content | headline-v2 |
 | K | Keyword | aposentadoria rural advogado |
 | L | GCLID | CjwKCAjw... |
-| M | Página | https://drajosimara.com.br/ |
+| M | Página | https://www.josimaralimadv.com.br/ |
 | N | Status | Novo |
 
 ### Mapeamento no Make (servico → label legível)
@@ -296,7 +289,6 @@ Campos complementares úteis: `lead_id`, `timestamp`, `status`, `cta_origin`, `w
 | Campos inválidos | 400 + detalhes | Mostrar erros por campo |
 | Honeypot preenchido | 200 fake | "Sucesso" (para bots) |
 | Rate limit excedido | 429 | "Muitas tentativas. Aguarde." |
-| Tempo mínimo não atingido | 200 fake | "Sucesso" (para bots) |
 | Webhook timeout | 500 | "Erro. Tente novamente." |
 | Webhook erro | 500 | "Erro. Tente novamente." |
 | Webhook não configurada | 200 (log local) | Sucesso normal |

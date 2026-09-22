@@ -208,7 +208,6 @@ interface LeadServerError {
 - Webhook URL via `process.env.MAKE_WEBHOOK_URL` (nunca exposta ao client)
 - Rate limiting in-memory (Map com IP + timestamp)
 - Honeypot field
-- Tempo mínimo de preenchimento (verificado via `form_opened_at`)
 - Sanitização de todos os inputs
 
 ---
