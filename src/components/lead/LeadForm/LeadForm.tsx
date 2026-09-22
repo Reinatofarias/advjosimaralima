@@ -34,6 +34,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
 
   const hasFiredFormStart = useRef(false);
   const nomeInputRef = useRef<HTMLInputElement>(null);
+  const whatsappLinkRef = useRef<HTMLAnchorElement>(null);
 
   // Auto-foco no primeiro campo ao carregar
   useEffect(() => {
@@ -148,9 +149,13 @@ export const LeadForm: React.FC<LeadFormProps> = ({
       const servicoLabel = selectedOption?.label || servico;
       const waUrl = buildWhatsAppUrl(nome, servicoLabel);
 
+      if (whatsappLinkRef.current) {
+        whatsappLinkRef.current.href = waUrl;
+      }
+
       // 4. Aguarda pequeno delay para garantir envio do hit e feedback visual
       setTimeout(() => {
-        window.location.href = waUrl;
+        whatsappLinkRef.current?.click();
         onSuccess();
       }, 700);
     } catch (err) {
@@ -309,6 +314,16 @@ export const LeadForm: React.FC<LeadFormProps> = ({
           </span>
         )}
       </button>
+
+      <a
+        ref={whatsappLinkRef}
+        href="https://wa.me/"
+        className={styles.trackingLink}
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        Continuar no WhatsApp
+      </a>
 
       {/* Aviso de Privacidade LGPD */}
       <p className={styles.privacyText}>

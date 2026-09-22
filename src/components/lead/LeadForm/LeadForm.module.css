@@ -194,6 +194,10 @@
   margin-top: 2px;
 }
 
+.trackingLink {
+  display: none;
+}
+
 .privacyLink {
   color: var(--color-accent);
   text-decoration: underline;
