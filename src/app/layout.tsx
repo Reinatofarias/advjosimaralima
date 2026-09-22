@@ -64,6 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WM42Z7FV';
+  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18458545804';
 
   // Schema.org JSON-LD para Advocacia / Serviços Jurídicos
   const jsonLd = {
@@ -112,6 +113,21 @@ export default function RootLayout({
             `}
           </Script>
         )}
+
+        {/* Google Ads tag */}
+        <Script
+          id="google-ads-loader"
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAdsId}');
+          `}
+        </Script>
 
         {/* Structured Data (JSON-LD) */}
         <script
