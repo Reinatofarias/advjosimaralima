@@ -7,8 +7,6 @@ export type CtaOrigin =
   | 'service_carteira_assinada'
   | 'service_adocao'
   | 'service_beneficio_negado'
-  | 'maternity_reality'
-  | 'other_rights'
   | 'why_analysis'
   | 'about'
   | 'faq_final'
