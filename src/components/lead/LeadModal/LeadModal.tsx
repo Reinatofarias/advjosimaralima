@@ -88,10 +88,10 @@ export const LeadModal: React.FC = () => {
 
         <div className={styles.header}>
           <h2 id="modal-title" className={styles.title}>
-            Conte qual é a sua situação
+            Descubra se você tem direito
           </h2>
           <p id="modal-desc" className={styles.subtitle}>
-            Preencha os dados abaixo para continuar o atendimento diretamente pelo WhatsApp da Dra. Josimara Lima.
+            Leva 2 minutos. Preencha abaixo e continue a conversa direto no WhatsApp da Dra. Josimara Lima.
           </p>
         </div>
 

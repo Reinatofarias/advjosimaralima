@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                 </li>
                 <li>
                   <Link href="/#servicos" className={styles.link}>
-                    Serviços Previdenciários
+                    Quem tem direito
                   </Link>
                 </li>
                 <li>

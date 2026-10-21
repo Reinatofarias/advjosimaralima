@@ -91,10 +91,11 @@ export default function RootLayout({
     ],
     knowsAbout: [
       'Direito Previdenciário',
-      'Aposentadoria Rural',
       'Salário-Maternidade',
-      'Auxílio-Acidente',
+      'Salário-Maternidade Rural',
       'Benefício Negado INSS',
+      'Pensão por Morte',
+      'BPC/LOAS',
     ],
   };
 

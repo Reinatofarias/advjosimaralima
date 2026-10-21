@@ -10,11 +10,11 @@ export const Hero: React.FC = () => {
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.contentCol}>
           <h1 id="hero-heading" className={styles.headline}>
-            Salário-maternidade: entenda se você tem direito ao benefício
+            Teve bebê nos últimos 5 anos? O INSS pode estar te devendo o salário-maternidade.
           </h1>
 
           <p className={styles.subheadline}>
-            Atendimento jurídico para mães, trabalhadoras rurais, autônomas e seguradas do INSS que precisam organizar documentos, comprovar atividade e solicitar o salário-maternidade com orientação clara em cada etapa.
+            Trabalhou na roça, por conta própria, como MEI ou ficou desempregada? Muita mãe tem esse direito e nunca pediu. Você manda uma mensagem, a Dra. Josimara olha seu caso e te diz com clareza se dá ou não dá.
           </p>
 
           <div className={styles.metaRow}>
@@ -27,10 +27,10 @@ export const Hero: React.FC = () => {
 
           <div className={styles.ctaWrapper}>
             <CTAButton origin="hero" size="lg" className={styles.mainCta}>
-              Quero analisar meu salário-maternidade
+              Quero saber se eu tenho direito
             </CTAButton>
             <span className={styles.ctaSubtext}>
-              Atendimento humanizado • Orientação rápida pelo WhatsApp
+              Leva 2 minutos • Tudo pelo WhatsApp, sem sair de casa
             </span>
           </div>
         </div>

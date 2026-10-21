@@ -5,8 +5,8 @@ import styles from './ScrollHistory.module.css';
 
 const SECTIONS = [
   { id: 'inicio', label: 'Início' },
-  { id: 'servicos', label: 'Serviços' },
-  { id: 'analise', label: 'Análise' },
+  { id: 'servicos', label: 'Quem tem direito' },
+  { id: 'analise', label: 'Como funciona' },
   { id: 'sobre', label: 'Sobre' },
   { id: 'duvidas', label: 'Dúvidas' },
 ];

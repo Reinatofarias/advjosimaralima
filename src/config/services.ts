@@ -3,59 +3,76 @@ export interface ServiceItem {
   title: string;
   shortDescription: string;
   ctaText: string;
+  /** Valor de SERVICE_OPTIONS pré-selecionado no formulário */
+  service: ServiceOptionValue;
   badge?: string;
 }
 
 export const SERVICES_LIST: ServiceItem[] = [
   {
-    id: 'aposentadoria_rural',
-    title: 'Aposentadoria Rural',
+    id: 'mae_rural',
+    title: 'Mãe da roça',
     shortDescription:
-      'Para quem trabalhou ou trabalha na agricultura e zona rural. Análise detalhada do tempo de atividade, documentação necessária e requisitos legais.',
-    ctaText: 'Entender minha situação',
+      'Planta, cria, trabalha no sítio da família? Mesmo sem nunca ter pago INSS, você pode ter direito.',
+    ctaText: 'Sou da roça',
+    service: 'salario_maternidade',
     badge: 'Trabalho Rural',
   },
   {
-    id: 'salario_maternidade',
-    title: 'Salário-Maternidade',
+    id: 'autonoma_mei',
+    title: 'Autônoma ou MEI',
     shortDescription:
-      'Orientação para trabalhadoras rurais, autônomas e seguradas do INSS antes ou após o parto, com verificação da qualidade de segurado e comprovação de atividade.',
-    ctaText: 'Entender minha situação',
-    badge: 'Maternidade',
+      'Vende, faz unha, costura, tem CNPJ? Se contribuiu, o benefício pode ser seu.',
+    ctaText: 'Trabalho por conta',
+    service: 'salario_maternidade',
+    badge: 'Por conta própria',
   },
   {
-    id: 'auxilio_acidente',
-    title: 'Auxílio-Acidente',
+    id: 'desempregada',
+    title: 'Desempregada',
     shortDescription:
-      'Para quem sofreu acidente de qualquer natureza que reduziu a capacidade para o trabalho habitual, mesmo após a recuperação e retorno às atividades.',
-    ctaText: 'Entender minha situação',
-    badge: 'Acidente / Sequelas',
+      'Saiu do emprego e engravidou depois? Dependendo de quando, o direito continua valendo.',
+    ctaText: 'Estou sem emprego',
+    service: 'salario_maternidade',
+    badge: 'Sem emprego',
+  },
+  {
+    id: 'carteira_assinada',
+    title: 'Carteira assinada',
+    shortDescription:
+      'A empresa não pagou ou te mandou embora? Tem caminho.',
+    ctaText: 'Tenho carteira',
+    service: 'salario_maternidade',
+    badge: 'CLT',
+  },
+  {
+    id: 'adocao',
+    title: 'Mãe por adoção',
+    shortDescription:
+      'Adotou ou tem a guarda para adoção? Você também pode receber.',
+    ctaText: 'Adotei',
+    service: 'salario_maternidade',
+    badge: 'Adoção',
   },
   {
     id: 'beneficio_negado',
-    title: 'Benefício Negado pelo INSS',
+    title: 'O INSS negou',
     shortDescription:
-      'Teve seu pedido indeferido? Muitas negativas ocorrem por inconformidades em documentos ou análise automática. Avaliação dos caminhos para reanálise.',
-    ctaText: 'Entender minha situação',
+      'Pediu e veio "indeferido"? Uma negativa não é o fim.',
+    ctaText: 'Meu pedido foi negado',
+    service: 'beneficio_negado',
     badge: 'Reanálise de Negativa',
-  },
-  {
-    id: 'outro',
-    title: 'Outros Benefícios Previdenciários',
-    shortDescription:
-      'BPC/LOAS (idosos e pessoas com deficiência de baixa renda), pensão por morte, aposentadoria por invalidez e outras demandas junto à Previdência.',
-    ctaText: 'Entender minha situação',
-    badge: 'INSS Geral',
   },
 ];
 
 export const SERVICE_OPTIONS = [
-  { value: 'aposentadoria_rural', label: 'Aposentadoria Rural' },
-  { value: 'salario_maternidade', label: 'Salário-Maternidade' },
-  { value: 'auxilio_acidente', label: 'Auxílio-Acidente' },
-  { value: 'beneficio_negado', label: 'Benefício negado pelo INSS' },
-  { value: 'bpc_loas', label: 'BPC/LOAS (Benefício de Prestação Continuada)' },
-  { value: 'outro', label: 'Outro assunto previdenciário' },
+  { value: 'salario_maternidade', label: 'Salário-maternidade' },
+  { value: 'beneficio_negado', label: 'O INSS negou meu pedido' },
+  { value: 'gravidez_risco', label: 'Afastamento por gravidez de risco' },
+  { value: 'bpc_loas', label: 'BPC para filho com deficiência' },
+  { value: 'pensao_morte', label: 'Pensão por morte' },
+  { value: 'aposentadoria_rural', label: 'Aposentadoria rural da mulher' },
+  { value: 'outro', label: 'Outro assunto no INSS' },
 ] as const;
 
 export type ServiceOptionValue = typeof SERVICE_OPTIONS[number]['value'];

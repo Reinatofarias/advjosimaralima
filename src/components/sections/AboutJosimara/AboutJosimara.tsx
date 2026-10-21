@@ -35,23 +35,23 @@ export const AboutJosimara: React.FC = () => {
             </div>
 
             <p className={styles.bioParagraph}>
-              Há quase 10 anos na prática previdenciária, a Dra. Josimara Lima atua na análise de benefícios do INSS com atenção aos documentos, ao histórico de contribuições e à realidade de cada pessoa atendida.
+              Há quase 10 anos a Dra. Josimara Lima ajuda mães do Sertão e de todo o Brasil a entender o que o INSS deve a elas.
             </p>
 
             <p className={styles.bioParagraph}>
-              Com atendimento em Pernambuco e estrutura online para todo o país, seu trabalho é pautado pela escuta atenta, análise minuciosa da documentação e explicação transparente de cada etapa, sempre com linguagem simples e acolhedora.
+              Ela explica tudo sem juridiquês e te fala a verdade: se o seu caso tem chance, ela diz. Se não tem, ela também diz.
             </p>
 
             <blockquote className={styles.quoteBox}>
               <p className={styles.quoteText}>
-                &ldquo;Cada pessoa que nos procura traz uma trajetória de trabalho e esforço. Nosso dever é escutar com respeito, examinar a documentação com rigor técnico e apontar com clareza os caminhos viáveis.&rdquo;
+                &ldquo;Toda mãe merece saber o que é dela. Meu trabalho é olhar o seu caso com cuidado e te mostrar o caminho, sem enrolação.&rdquo;
               </p>
             </blockquote>
 
             <div className={styles.bulletList}>
               <div className={styles.bulletItem}>
                 <span className={styles.bulletMark}>✓</span>
-                <span>Atendimento presencial em Pernambuco</span>
+                <span>Atendimento presencial em Araripina/PE</span>
               </div>
               <div className={styles.bulletItem}>
                 <span className={styles.bulletMark}>✓</span>
@@ -59,13 +59,13 @@ export const AboutJosimara: React.FC = () => {
               </div>
               <div className={styles.bulletItem}>
                 <span className={styles.bulletMark}>✓</span>
-                <span>Linguagem acessível, clara e humanizada</span>
+                <span>Documentos enviados pelo celular, sem sair de casa</span>
               </div>
             </div>
 
             <div className={styles.ctaWrapper}>
               <CTAButton origin="about" variant="primary" size="lg">
-                Falar sobre minha situação
+                Quero falar com a Dra. Josimara
               </CTAButton>
             </div>
           </div>

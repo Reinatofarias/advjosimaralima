@@ -24,7 +24,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
 }) => {
   const [nome, setNome] = useState('');
   const [telefone, setTelefone] = useState('');
-  const [servico, setServico] = useState(initialService || '');
+  const [servico, setServico] = useState(initialService || 'salario_maternidade');
   const [honeypot, setHoneypot] = useState('');
 
   const [errors, setErrors] = useState<{ nome?: string; telefone?: string; servico?: string }>({});
@@ -257,7 +257,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
       {/* Campo Tipo de Serviço */}
       <div className={styles.fieldGroup}>
         <label htmlFor="lead-servico" className={styles.label}>
-          Qual assunto deseja analisar? <span className={styles.required}>*</span>
+          Qual é a sua situação? <span className={styles.required}>*</span>
         </label>
         <div className={styles.selectWrapper}>
           <select
