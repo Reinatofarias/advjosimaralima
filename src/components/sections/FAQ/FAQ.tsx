@@ -12,34 +12,34 @@ interface FaqItem {
 
 const FAQ_ITEMS: FaqItem[] = [
   {
-    question: 'Quem trabalhou na zona rural pode solicitar aposentadoria rural?',
+    question: 'Recebo Bolsa Família. Posso pedir o salário-maternidade?',
     answer:
-      'A aposentadoria rural é destinada aos trabalhadores que exerceram atividade no campo (como segurado especial em regime de economia familiar, empregado rural ou diarista). É necessário atingir a idade exigida por lei e comprovar o tempo de efetivo trabalho rural por meio de documentação correspondente. Cada trajetória precisa ser examinada individualmente para conferência dos requisitos.',
+      'São coisas diferentes: o Bolsa Família é um programa social, e o salário-maternidade é um direito do INSS de quem trabalha ou já trabalhou. Receber um não impede de pedir o outro. A Dra. Josimara te explica como fica no seu caso.',
   },
   {
-    question: 'Quais documentos podem ajudar na comprovação da atividade rural?',
+    question: 'Meu filho já nasceu. Ainda dá tempo?',
     answer:
-      'Diversos registros da época podem servir como início de prova material, tais como: contratos de parceria ou arrendamento, declarações de sindicato rural homologadas, notas fiscais de produtor, certidões de casamento ou nascimento constando a profissão de agricultor, fichas de matrícula escolar dos filhos e registros em cooperativas. Uma avaliação detalhada identifica quais documentos do seu acervo são válidos perante as exigências do INSS.',
+      'Em regra, o pedido pode ser feito em até 5 anos depois do parto. Se o seu bebê nasceu nesse período, vale a pena olhar o seu caso.',
   },
   {
-    question: 'Quem teve benefício negado pode buscar uma nova análise?',
+    question: 'Nunca paguei INSS. Tenho direito?',
     answer:
-      'Sim. O indeferimento administrativo pelo INSS não é definitivo. Em muitos casos, a negativa ocorre por ausência de um documento formal ou erro de cômputo de períodos. É possível apresentar recurso administrativo ou, se cabível, ingressar com ação judicial para reexame do pedido por um juiz federal.',
+      'Se você trabalha na roça em regime de economia familiar, pode ter direito mesmo sem nunca ter contribuído. Nos outros casos, depende do seu histórico de trabalho e contribuições.',
   },
   {
-    question: 'Como funciona o atendimento online?',
+    question: 'O INSS já negou meu pedido. E agora?',
     answer:
-      'O atendimento online é realizado por meio de canais seguros (WhatsApp, videochamada ou e-mail). Você pode digitalizar ou fotografar seus documentos com o próprio celular e enviá-los para conferência. A análise técnica e as orientações são prestadas com a mesma proximidade, cuidado e sigilo do atendimento presencial no escritório.',
+      'A negativa não é definitiva. Muitas acontecem por falta de um documento ou por análise automática, e podem ser revistas por recurso ou, quando cabível, na Justiça.',
   },
   {
-    question: 'Preciso morar em Araripina para ser atendida(o)?',
+    question: 'Preciso ir até o escritório?',
     answer:
-      'Não. Embora o escritório físico esteja sediado em Araripina/PE, atendendo presencialmente todo o Sertão do Araripe e municípios vizinhos, a atuação online permite orientar trabalhadores rurais e segurados residentes em qualquer localidade do Brasil.',
+      'Não. Você fotografa os documentos com o celular e manda pelo WhatsApp. O escritório fica em Araripina/PE, e o atendimento online vale para todo o Brasil.',
   },
   {
-    question: 'Como saber qual benefício pode se aplicar à minha situação?',
+    question: 'Quanto custa?',
     answer:
-      'O caminho mais prudente é apresentar seu caso para uma análise preliminar. Ao examinar sua idade, tempo de contribuição ou trabalho no campo, carnês e laudos médicos (no caso de benefícios por incapacidade), é possível apontar com clareza quais modalidades podem ser requeridas.',
+      'Na primeira conversa a Dra. Josimara entende o seu caso e explica tudo, inclusive os honorários, antes de você decidir qualquer coisa.',
   },
 ];
 
@@ -55,10 +55,10 @@ export const FAQ: React.FC = () => {
       <div className="container">
         <div className={styles.header}>
           <h2 id="faq-heading" className={styles.title}>
-            Perguntas Frequentes
+            As dúvidas que toda mãe tem
           </h2>
           <p className={styles.subtitle}>
-            Esclarecimentos sobre requerimentos, comprovações e modalidades de benefícios previdenciários.
+            Respostas diretas, sem juridiquês.
           </p>
         </div>
 
@@ -112,14 +112,14 @@ export const FAQ: React.FC = () => {
             />
           </div>
           <div className={styles.finalContent}>
-            <h3 className={styles.finalTitle}>Ainda tem dúvidas sobre sua situação?</h3>
+            <h3 className={styles.finalTitle}>Cada mês que passa é um mês mais perto do prazo acabar.</h3>
             <p className={styles.finalText}>
-              O primeiro passo é explicar o que está acontecendo. Apresente seu caso para conversar diretamente com a assessoria da Dra. Josimara Lima pelo WhatsApp.
+              Você não precisa saber se tem direito. Só precisa perguntar. Mande sua mensagem agora e descubra em poucos minutos.
             </p>
           </div>
           <div className={styles.finalAction}>
             <CTAButton origin="faq_final" variant="primary" size="lg">
-              Explicar minha situação
+              Quero saber se eu tenho direito
             </CTAButton>
           </div>
         </div>

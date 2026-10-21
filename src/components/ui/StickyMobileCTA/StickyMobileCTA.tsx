@@ -45,7 +45,7 @@ export const StickyMobileCTA: React.FC = () => {
           onClick={() => openModal('sticky_mobile')}
         >
           <span className={styles.pulseDot} aria-hidden="true" />
-          <span className={styles.text}>Falar sobre minha situação</span>
+          <span className={styles.text}>Quero saber se tenho direito</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

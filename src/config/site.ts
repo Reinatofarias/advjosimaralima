@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Dra. Josimara Lima',
-  title: 'Advogada Previdenciária em Araripina/PE — Dra. Josimara Lima',
-  shortTitle: 'Dra. Josimara Lima — Direito Previdenciário',
+  title: 'Salário-Maternidade no INSS — Dra. Josimara Lima, Advogada em Araripina/PE',
+  shortTitle: 'Dra. Josimara Lima — Salário-Maternidade',
   role: 'Advogada Previdenciária',
   oab: '57.835',
   experienceYears: 'Há quase 10 anos na prática previdenciária',
@@ -19,15 +19,15 @@ export const SITE_CONFIG = {
   },
   meta: {
     description:
-      'Análise individual e cuidadosa de questões previdenciárias: Aposentadoria Rural, Salário-Maternidade, Auxílio-Acidente e Benefício Negado pelo INSS. Atendimento presencial em Araripina/PE e online.',
+      'Teve bebê nos últimos 5 anos? Mães da roça, autônomas, MEI e desempregadas podem ter direito ao salário-maternidade do INSS. Atendimento em Araripina/PE e online para todo o Brasil.',
     keywords: [
-      'Direito Previdenciário',
-      'Advogada Previdenciária Araripina',
-      'Aposentadoria Rural Araripina PE',
+      'Salário-Maternidade',
       'Salário-Maternidade Rural',
-      'Auxílio-Acidente INSS',
-      'Benefício Negado INSS',
-      'Advogado INSS Pernambuco',
+      'Salário-Maternidade INSS',
+      'Salário-Maternidade Desempregada',
+      'Salário-Maternidade MEI',
+      'Advogada Previdenciária Araripina',
+      'Direitos da Mulher INSS',
       'Dra. Josimara Lima',
     ],
   },

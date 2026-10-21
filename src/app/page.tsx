@@ -19,10 +19,10 @@ export default function Home() {
         {/* SEÇÃO 01 — HERO */}
         <Hero />
 
-        {/* SEÇÃO 02 — SITUAÇÕES / SERVIÇOS */}
+        {/* SEÇÃO 02 — QUEM PODE TER DIREITO */}
         <Services />
 
-        {/* SEÇÃO 03 — POR QUE UMA ANÁLISE INDIVIDUAL É IMPORTANTE */}
+        {/* SEÇÃO 03 — COMO FUNCIONA */}
         <WhyAnalysis />
 
         {/* SEÇÃO 04 — DRA. JOSIMARA LIMA */}

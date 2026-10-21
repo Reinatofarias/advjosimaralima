@@ -9,10 +9,10 @@ export const Services: React.FC = () => {
       <div className="container">
         <div className={styles.header}>
           <h2 id="services-heading" className={styles.title}>
-            Em qual dessas situações você se encontra?
+            Se você se encaixa em um destes, vale a pena olhar.
           </h2>
           <p className={styles.subtitle}>
-            Selecione o assunto mais próximo da sua realidade. Cada benefício possui critérios e documentos específicos perante a Previdência Social.
+            Toque na situação mais parecida com a sua. Cada caso tem regras e documentos próprios, e é isso que a Dra. Josimara confere para você.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export const Services: React.FC = () => {
               <div className={styles.cardFooter}>
                 <CTAButton
                   origin={`service_${service.id}`}
-                  service={service.id}
+                  service={service.service}
                   variant="outline"
                   size="sm"
                   fullWidth

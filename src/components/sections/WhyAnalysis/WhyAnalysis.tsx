@@ -8,52 +8,52 @@ export const WhyAnalysis: React.FC = () => {
       <div className="container">
         <div className={styles.header}>
           <h2 id="why-analysis-heading" className={styles.title}>
-            Por que cada situação precisa de uma análise individual?
+            Você manda uma mensagem. O resto é com a gente.
           </h2>
           <p className={styles.subtitle}>
-            Não existe uma fórmula padrão para solicitações previdenciárias. Cada segurado construiu uma trajetória única de vida e trabalho perante o INSS.
+            Sem fila, sem ir ao INSS, sem formulário complicado. Você só segue se achar que vale a pena.
           </p>
         </div>
 
         <div className={styles.pillarsGrid}>
-          {/* Ponto 1: Documentação */}
+          {/* Passo 1 */}
           <div className={styles.pillarCard}>
             <div className={styles.pillarNumber}>01</div>
-            <h3 className={styles.pillarTitle}>Documentação específica</h3>
+            <h3 className={styles.pillarTitle}>Você conta sua situação</h3>
             <p className={styles.pillarText}>
-              Cada modalidade de benefício exige documentos próprios. Na atividade rural, contratos, notas fiscais e declarações do período precisam ser organizados com rigor para comprovar o efetivo exercício de trabalho.
+              Pelo WhatsApp, em poucas linhas. Não precisa saber termo jurídico nem ter tudo em mãos.
             </p>
           </div>
 
-          {/* Ponto 2: Requisitos */}
+          {/* Passo 2 */}
           <div className={styles.pillarCard}>
             <div className={styles.pillarNumber}>02</div>
-            <h3 className={styles.pillarTitle}>Requisitos que variam</h3>
+            <h3 className={styles.pillarTitle}>A Dra. Josimara analisa</h3>
             <p className={styles.pillarText}>
-              Qualidade de segurado, períodos de contribuição, comprovação de atividade e condições pessoais variam segundo a regra aplicável. Entender quais diretrizes atendem ao seu histórico evita pedidos indeferidos.
+              Ela olha seus documentos e te diz com sinceridade se vale a pena pedir. Você fotografa e manda pelo celular.
             </p>
           </div>
 
-          {/* Ponto 3: Histórico */}
+          {/* Passo 3 */}
           <div className={styles.pillarCard}>
             <div className={styles.pillarNumber}>03</div>
-            <h3 className={styles.pillarTitle}>Seu histórico importa</h3>
+            <h3 className={styles.pillarTitle}>Ela cuida do pedido</h3>
             <p className={styles.pillarText}>
-              Períodos em lavoura, trabalho informal, vínculos em carteira ou recolhimentos em carnê compõem um histórico único que precisa ser analisado em conjunto, com cuidado e responsabilidade.
+              Se fizer sentido, a Dra. faz o pedido no INSS e te avisa de cada passo até a resposta.
             </p>
           </div>
         </div>
 
         <div className={styles.calloutBox}>
           <div className={styles.calloutText}>
-            <h3 className={styles.calloutHeading}>Deseja compreender as possibilidades do seu caso?</h3>
+            <h3 className={styles.calloutHeading}>Você não precisa saber se tem direito. Só precisa perguntar.</h3>
             <p className={styles.calloutDesc}>
-              Apresente sua situação para que a documentação e os requisitos sejam examinados com clareza antes de qualquer requerimento.
+              Conte sua situação agora e descubra em poucos minutos qual é o seu caminho.
             </p>
           </div>
           <div className={styles.calloutAction}>
             <CTAButton origin="why_analysis" variant="primary" size="md">
-              Quero entender meu caso
+              Quero começar agora
             </CTAButton>
           </div>
         </div>
