@@ -5,6 +5,7 @@ export interface SubmitLeadPayload {
   telefone: string;
   servico: string;
   cta_origin: string;
+  perfil?: string;
   utm?: UtmParams;
   honeypot?: string;
   form_opened_at: number;
@@ -23,6 +24,7 @@ export async function submitLead(payload: SubmitLeadPayload): Promise<SubmitLead
     telefone: payload.telefone,
     servico: payload.servico,
     cta_origin: payload.cta_origin,
+    perfil: payload.perfil || '',
     utm_source: payload.utm?.utm_source || '',
     utm_medium: payload.utm?.utm_medium || '',
     utm_campaign: payload.utm?.utm_campaign || '',
@@ -45,7 +47,12 @@ export async function submitLead(payload: SubmitLeadPayload): Promise<SubmitLead
     body: JSON.stringify(requestBody),
   });
 
-  const data = await response.json();
+  let data: { error?: string; fields?: Record<string, string>; lead_id?: string } = {};
+  try {
+    data = await response.json();
+  } catch {
+    // Resposta sem JSON (ex.: timeout da Vercel). Tratada como falha de conexão abaixo.
+  }
 
   if (!response.ok) {
     return {

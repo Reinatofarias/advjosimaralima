@@ -76,3 +76,14 @@ export const SERVICE_OPTIONS = [
 ] as const;
 
 export type ServiceOptionValue = typeof SERVICE_OPTIONS[number]['value'];
+
+/**
+ * Perfil da mãe a partir do card clicado (ex.: origem "service_mae_rural" → "Mãe da roça").
+ * Só vale se a pessoa manteve a situação que veio pré-selecionada pelo card.
+ */
+export function getProfileFromOrigin(ctaOrigin: string, servico: string): string {
+  if (!ctaOrigin.startsWith('service_')) return '';
+  const card = SERVICES_LIST.find((item) => `service_${item.id}` === ctaOrigin);
+  if (!card || card.service !== servico || card.service !== 'salario_maternidade') return '';
+  return card.title;
+}

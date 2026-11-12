@@ -207,3 +207,9 @@
 .privacyLink:hover {
   color: var(--color-accent-dark);
 }
+
+.fallbackText {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-neutral-700);
+}
