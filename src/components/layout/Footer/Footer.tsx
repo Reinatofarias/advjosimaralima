@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
             <nav aria-label="Links rápidos">
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/#salario-maternidade" className={styles.link}>
+                  <Link href="/#inicio" className={styles.link}>
                     Salário-Maternidade
                   </Link>
                 </li>

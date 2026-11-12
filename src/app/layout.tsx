@@ -72,7 +72,9 @@ export default function RootLayout({
     '@type': 'LegalService',
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.meta.description,
-    telephone: SITE_CONFIG.contact.whatsappNumber,
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.josimaralimadv.com.br',
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.josimaralimadv.com.br'}/opengraph-image.png`,
+    telephone: `+${SITE_CONFIG.contact.whatsappNumber.replace(/\D/g, '')}`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: SITE_CONFIG.location.city,

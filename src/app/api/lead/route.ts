@@ -118,6 +118,8 @@ export async function POST(request: NextRequest) {
       referrer: sanitizeString(getString(body.referrer)),
       timestamp,
       status: 'novo',
+      // Campo novo e opcional (perfil da mãe pelo card clicado). Os campos acima não mudam: são as colunas do Sheets.
+      perfil: sanitizeString(getString(body.perfil)),
     };
 
     // 5. Despacho para Make Webhook (se configurado)
@@ -130,7 +132,7 @@ export async function POST(request: NextRequest) {
       });
 
       return NextResponse.json(
-        { success: false, error: 'Integração de atendimento indisponível. Verifique a configuração do webhook.' },
+        { success: false, error: 'Não foi possível registrar seus dados agora. Tente novamente em instantes.' },
         { status: 500 }
       );
     }

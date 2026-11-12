@@ -27,6 +27,8 @@ export const SITE_CONFIG = {
       'Salário-Maternidade Desempregada',
       'Salário-Maternidade MEI',
       'Advogada Previdenciária Araripina',
+      'Salário-Maternidade Araripina',
+      'Advogada Sertão do Araripe',
       'Direitos da Mulher INSS',
       'Dra. Josimara Lima',
     ],

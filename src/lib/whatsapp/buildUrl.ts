@@ -3,7 +3,7 @@ import { SITE_CONFIG } from '@/config/site';
 /**
  * Constrói a URL do WhatsApp com mensagem pré-preenchida contextualizada
  */
-export function buildWhatsAppUrl(nome: string, servicoLabel: string): string {
+export function buildWhatsAppUrl(nome: string, servicoLabel: string, perfil = ''): string {
   const cleanPhone = SITE_CONFIG.contact.whatsappNumber.replace(/\D/g, '');
 
   const message = `Olá, Dra. Josimara.
@@ -11,7 +11,7 @@ export function buildWhatsAppUrl(nome: string, servicoLabel: string): string {
 Acabei de preencher o formulário do site.
 
 Nome: ${nome.trim()}
-Assunto: ${servicoLabel}
+Assunto: ${perfil ? `${servicoLabel} (${perfil})` : servicoLabel}
 
 Gostaria de entender melhor minha situação.`;
 

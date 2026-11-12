@@ -42,9 +42,16 @@ export interface WhatsAppRedirectEvent {
   service: string;
 }
 
+export interface WhatsAppFallbackEvent {
+  event: 'whatsapp_fallback_click';
+  cta_origin: CtaOrigin | string;
+  service: string;
+}
+
 export type TrackingEvent =
   | FormOpenEvent
   | FormStartEvent
   | FormSubmitEvent
   | LeadCreatedEvent
-  | WhatsAppRedirectEvent;
+  | WhatsAppRedirectEvent
+  | WhatsAppFallbackEvent;

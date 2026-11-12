@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { SERVICE_OPTIONS } from '@/config/services';
+import { SERVICE_OPTIONS, getProfileFromOrigin } from '@/config/services';
 import { maskPhoneBR, validateLeadForm } from '@/lib/leads/validation';
 import { submitLead } from '@/lib/leads/submitLead';
 import { getSavedUtm } from '@/lib/utm/storage';
@@ -31,6 +31,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [isSuccessMessage, setIsSuccessMessage] = useState(false);
+  const [fallbackUrl, setFallbackUrl] = useState<string | null>(null);
 
   const hasFiredFormStart = useRef(false);
   const nomeInputRef = useRef<HTMLInputElement>(null);
@@ -83,9 +84,27 @@ export const LeadForm: React.FC<LeadFormProps> = ({
     }
   };
 
+  const getServicoLabel = () =>
+    SERVICE_OPTIONS.find((opt) => opt.value === servico)?.label || servico;
+
+  // Plano B: se o registro falhar (Make fora, timeout), a pessoa ainda consegue falar com a Dra.
+  // Não dispara lead_created: a conversão continua valendo só para lead salvo de verdade.
+  const showWhatsAppFallback = () => {
+    setFallbackUrl(buildWhatsAppUrl(nome, getServicoLabel(), getProfileFromOrigin(ctaOrigin, servico)));
+  };
+
+  const handleFallbackClick = () => {
+    pushDataLayer({
+      event: 'whatsapp_fallback_click',
+      cta_origin: ctaOrigin,
+      service: servico,
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setServerError(null);
+    setFallbackUrl(null);
 
     // Validação client-side
     const validation = validateLeadForm({ nome, telefone, servico });
@@ -110,6 +129,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
         telefone,
         servico,
         cta_origin: ctaOrigin,
+        perfil: getProfileFromOrigin(ctaOrigin, servico),
         utm,
         honeypot,
         form_opened_at: formOpenedAt || Date.now(),
@@ -119,6 +139,8 @@ export const LeadForm: React.FC<LeadFormProps> = ({
         setServerError(result.error || 'Não foi possível enviar no momento. Tente novamente.');
         if (result.fields) {
           setErrors(result.fields);
+        } else {
+          showWhatsAppFallback();
         }
         setIsSubmitting(false);
         return;
@@ -145,9 +167,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
       setIsSuccessMessage(true);
 
       // 3. Monta o link contextualizado do WhatsApp
-      const selectedOption = SERVICE_OPTIONS.find((opt) => opt.value === servico);
-      const servicoLabel = selectedOption?.label || servico;
-      const waUrl = buildWhatsAppUrl(nome, servicoLabel);
+      const waUrl = buildWhatsAppUrl(nome, getServicoLabel(), getProfileFromOrigin(ctaOrigin, servico));
 
       if (whatsappLinkRef.current) {
         whatsappLinkRef.current.href = waUrl;
@@ -161,6 +181,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({
     } catch (err) {
       console.error('Erro ao submeter lead:', err);
       setServerError('Ocorreu um erro de conexão. Por favor, tente novamente.');
+      showWhatsAppFallback();
       setIsSubmitting(false);
     }
   };
@@ -190,6 +211,22 @@ export const LeadForm: React.FC<LeadFormProps> = ({
           </svg>
           <span>{serverError}</span>
         </div>
+      )}
+
+      {fallbackUrl && (
+        <p className={styles.fallbackText}>
+          Se preferir, fale direto com a Dra. Josimara:{' '}
+          <a
+            href={fallbackUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.privacyLink}
+            onClick={handleFallbackClick}
+          >
+            abrir o WhatsApp
+          </a>
+          .
+        </p>
       )}
 
       {isSuccessMessage && (
