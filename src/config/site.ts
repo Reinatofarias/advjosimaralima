@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   },
   contact: {
     whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5587991658434',
-    email: '[INSERIR EMAIL]',
+    email: 'limajosimara17@gmail.com',
   },
   meta: {
     description:

@@ -82,7 +82,7 @@ export default function PoliticaPrivacidade() {
                 <li>Revogar seu consentimento.</li>
               </ul>
               <p>
-                Para exercer qualquer um desses direitos, basta enviar uma mensagem pelo próprio WhatsApp de atendimento ou contatar através do e-mail: <code>{SITE_CONFIG.contact.email}</code>.
+                Para exercer qualquer um desses direitos, basta enviar uma mensagem pelo próprio WhatsApp de atendimento ou contatar através do e-mail: <a href={`mailto:${SITE_CONFIG.contact.email}`}>{SITE_CONFIG.contact.email}</a>.
               </p>
             </section>
 
